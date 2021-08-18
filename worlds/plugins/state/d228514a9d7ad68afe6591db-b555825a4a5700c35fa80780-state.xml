@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE muclient>
+<!-- MuClient version 5.07-pre -->
+<!-- Written by Nick Gammon -->
+<!-- Home Page: http://www.mushclient.com/ -->
+
+<!-- Plugin state saved. Plugin: "CleftMUSH_Chat_Window". World: "Cleft of Dimensions". -->
+
+<muclient>
+
+<!-- variables -->
+
+<variables
+   muclient_version="5.07-pre"
+   world_file_version="15"
+  >
+  <variable name="WINDOW_HEIGHT">804</variable>
+  <variable name="WINDOW_WIDTH">1892</variable>
+  <variable name="aard_theme_just_reloading">1</variable>
+  <variable name="channels_table">channels_table = {}
+  channels_table.tells = {}
+    channels_table.tells.capture = true
+  channels_table.info = {}
+    channels_table.info.capture = true
+  channels_table.discord = {}
+    channels_table.discord.capture = true
+  channels_table.shout = {}
+    channels_table.shout.capture = true
+  channels_table.grats = {}
+    channels_table.grats.capture = true
+  channels_table.grouptell = {}
+    channels_table.grouptell.capture = true
+  channels_table.ooc = {}
+    channels_table.ooc.capture = true
+  channels_table.music = {}
+    channels_table.music.capture = true
+  channels_table.says = {}
+    channels_table.says.capture = true
+  channels_table.yell = {}
+    channels_table.yell.capture = true
+  channels_table.quote = {}
+    channels_table.quote.capture = true</variable>
+  <variable name="current_tab">1</variable>
+  <variable name="date_format">[%b %d %I:%M:%S%p] </variable>
+  <variable name="font_name">Fixedsys Excelsior</variable>
+  <variable name="font_size">12</variable>
+  <variable name="info_on">0</variable>
+  <variable name="log_colour_codes">1</variable>
+  <variable name="log_timestamps">1</variable>
+  <variable name="log_to_file">1</variable>
+  <variable name="mw_b555825a4a5700c35fa80780_windowx">1786</variable>
+  <variable name="mw_b555825a4a5700c35fa80780_windowy">1152</variable>
+  <variable name="tabs_channel_captures">tabs_channel_captures = {}
+  tabs_channel_captures[1] = {}
+    tabs_channel_captures[1].tells = {}
+      tabs_channel_captures[1].tells.capture = true
+    tabs_channel_captures[1].info = {}
+      tabs_channel_captures[1].info.capture = true
+    tabs_channel_captures[1].discord = {}
+      tabs_channel_captures[1].discord.capture = true
+    tabs_channel_captures[1].shout = {}
+      tabs_channel_captures[1].shout.capture = true
+    tabs_channel_captures[1].grats = {}
+      tabs_channel_captures[1].grats.capture = true
+    tabs_channel_captures[1].grouptell = {}
+      tabs_channel_captures[1].grouptell.capture = true
+    tabs_channel_captures[1].music = {}
+      tabs_channel_captures[1].music.capture = true
+    tabs_channel_captures[1].ooc = {}
+      tabs_channel_captures[1].ooc.capture = true
+    tabs_channel_captures[1].yell = {}
+      tabs_channel_captures[1].yell.capture = true
+    tabs_channel_captures[1].says = {}
+      tabs_channel_captures[1].says.capture = true
+    tabs_channel_captures[1].quote = {}
+      tabs_channel_captures[1].quote.capture = true
+  tabs_channel_captures[2] = {}
+    tabs_channel_captures[2].tells = {}
+      tabs_channel_captures[2].tells.capture = true
+    tabs_channel_captures[2].info = {}
+      tabs_channel_captures[2].info.capture = true
+    tabs_channel_captures[2].discord = {}
+      tabs_channel_captures[2].discord.capture = true
+    tabs_channel_captures[2].shout = {}
+      tabs_channel_captures[2].shout.capture = true
+    tabs_channel_captures[2].grats = {}
+      tabs_channel_captures[2].grats.capture = true
+    tabs_channel_captures[2].grouptell = {}
+      tabs_channel_captures[2].grouptell.capture = true
+    tabs_channel_captures[2].ooc = {}
+      tabs_channel_captures[2].ooc.capture = true
+    tabs_channel_captures[2].music = {}
+      tabs_channel_captures[2].music.capture = true
+    tabs_channel_captures[2].says = {}
+      tabs_channel_captures[2].says.capture = true
+    tabs_channel_captures[2].yell = {}
+      tabs_channel_captures[2].yell.capture = true
+    tabs_channel_captures[2].quote = {}
+      tabs_channel_captures[2].quote.capture = true
+  tabs_channel_captures[3] = {}
+    tabs_channel_captures[3].tells = {}
+      tabs_channel_captures[3].tells.capture = true
+    tabs_channel_captures[3].info = {}
+      tabs_channel_captures[3].info.capture = true
+    tabs_channel_captures[3].discord = {}
+      tabs_channel_captures[3].discord.capture = true
+    tabs_channel_captures[3].shout = {}
+      tabs_channel_captures[3].shout.capture = true
+    tabs_channel_captures[3].grats = {}
+      tabs_channel_captures[3].grats.capture = true
+    tabs_channel_captures[3].grouptell = {}
+      tabs_channel_captures[3].grouptell.capture = true
+    tabs_channel_captures[3].ooc = {}
+      tabs_channel_captures[3].ooc.capture = true
+    tabs_channel_captures[3].music = {}
+      tabs_channel_captures[3].music.capture = true
+    tabs_channel_captures[3].says = {}
+      tabs_channel_captures[3].says.capture = true
+    tabs_channel_captures[3].yell = {}
+      tabs_channel_captures[3].yell.capture = true
+    tabs_channel_captures[3].quote = {}
+      tabs_channel_captures[3].quote.capture = true
+  tabs_channel_captures[4] = {}
+    tabs_channel_captures[4].tells = {}
+      tabs_channel_captures[4].tells.capture = true
+    tabs_channel_captures[4].info = {}
+      tabs_channel_captures[4].info.capture = true
+    tabs_channel_captures[4].discord = {}
+      tabs_channel_captures[4].discord.capture = true
+    tabs_channel_captures[4].shout = {}
+      tabs_channel_captures[4].shout.capture = true
+    tabs_channel_captures[4].grats = {}
+      tabs_channel_captures[4].grats.capture = true
+    tabs_channel_captures[4].grouptell = {}
+      tabs_channel_captures[4].grouptell.capture = true
+    tabs_channel_captures[4].ooc = {}
+      tabs_channel_captures[4].ooc.capture = true
+    tabs_channel_captures[4].music = {}
+      tabs_channel_captures[4].music.capture = true
+    tabs_channel_captures[4].says = {}
+      tabs_channel_captures[4].says.capture = true
+    tabs_channel_captures[4].yell = {}
+      tabs_channel_captures[4].yell.capture = true
+    tabs_channel_captures[4].quote = {}
+      tabs_channel_captures[4].quote.capture = true
+  tabs_channel_captures[5] = {}
+    tabs_channel_captures[5].tells = {}
+      tabs_channel_captures[5].tells.capture = true
+    tabs_channel_captures[5].info = {}
+      tabs_channel_captures[5].info.capture = true
+    tabs_channel_captures[5].discord = {}
+      tabs_channel_captures[5].discord.capture = true
+    tabs_channel_captures[5].shout = {}
+      tabs_channel_captures[5].shout.capture = true
+    tabs_channel_captures[5].grats = {}
+      tabs_channel_captures[5].grats.capture = true
+    tabs_channel_captures[5].grouptell = {}
+      tabs_channel_captures[5].grouptell.capture = true
+    tabs_channel_captures[5].ooc = {}
+      tabs_channel_captures[5].ooc.capture = true
+    tabs_channel_captures[5].music = {}
+      tabs_channel_captures[5].music.capture = true
+    tabs_channel_captures[5].says = {}
+      tabs_channel_captures[5].says.capture = true
+    tabs_channel_captures[5].yell = {}
+      tabs_channel_captures[5].yell.capture = true
+    tabs_channel_captures[5].quote = {}
+      tabs_channel_captures[5].quote.capture = true</variable>
+  <variable name="tabs_names">tabs_names = {}
+  tabs_names[1] = "Main Chat"
+  tabs_names[2] = "Tells"
+  tabs_names[3] = "Group tells"
+  tabs_names[4] = "Notify"
+  tabs_names[5] = "Discord"</variable>
+  <variable name="tabs_nonchannel_captures">tabs_nonchannel_captures = {}
+  tabs_nonchannel_captures[1] = {}
+    tabs_nonchannel_captures[1].info = {}
+  tabs_nonchannel_captures[2] = {}
+    tabs_nonchannel_captures[2].info = {}
+      tabs_nonchannel_captures[2].info.capture = true
+  tabs_nonchannel_captures[3] = {}
+    tabs_nonchannel_captures[3].info = {}
+      tabs_nonchannel_captures[3].info.capture = true
+  tabs_nonchannel_captures[4] = {}
+    tabs_nonchannel_captures[4].info = {}
+      tabs_nonchannel_captures[4].info.capture = true
+  tabs_nonchannel_captures[5] = {}
+    tabs_nonchannel_captures[5].info = {}
+      tabs_nonchannel_captures[5].info.capture = true</variable>
+</variables>
+</muclient>

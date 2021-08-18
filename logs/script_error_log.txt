@@ -1,0 +1,8 @@
+
+
+--- Scripting error on Wednesday, January 02, 2019, 6:05 PM ---
+
+Compile error
+Plugin: AlterAeon (called from world: Demon Aeon)
+Immediate execution
+[string "Plugin: AlterAeon"]:6061: invalid escape sequence near '"'

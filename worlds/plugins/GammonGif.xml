@@ -1,0 +1,203 @@
+
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE muclient>
+
+<muclient>
+<plugin
+   name="PlayMultipleMovies"
+   author="Nick Gammon"
+   id="0ad674f9798be6d5b8ff2e93"
+   language="Lua"
+   purpose="Demonstrates playing multiple animatinos"
+   save_state="y"
+   date_written="2019-11-10 13:24:09"
+   requires="5.00"
+   version="1.0"
+   >
+
+</plugin>
+
+<!--  Aliases  -->
+
+<aliases>
+  <alias
+   script="TestMovie"
+   match="^testmovie (\d+)$"
+   enabled="y"
+   regexp="y"
+   sequence="100"
+  >
+  </alias>
+</aliases>
+
+
+
+<!--  Timers  -->
+
+<timers>
+  <timer
+    script="PlayAllMovieFrames"
+    enabled="y"
+    second="0.1"
+    active_closed="y"
+  >
+
+  </timer>
+</timers>
+
+
+<!--  Script  -->
+
+
+<script>
+<![CDATA[
+
+infos = {}
+
+function OnPluginInstall ()
+
+  win = "movie_" .. GetPluginID ()  -- get a unique name
+
+   -- make the window
+  WindowCreate (win,  100,  -- left
+                      100,  -- top
+                      500,  -- width
+                      500,  -- height
+                      miniwin.pos_bottom_right,
+                      0,
+                      0)  -- create window
+
+  WindowShow (win)
+  
+end -- OnPluginInstall
+                      
+-- --------------------------------------------------------------------
+-- PlayMovie (info)
+--  info.filename (eg. "/frames/my_movie_%03i.png" )
+--  info.frames   (eg. 10, if the movie consists of 10 files)
+--  info.x   - X position on screen
+--  info.y   - Y position on screen
+
+--  Suggested conversion:
+--    ffmpeg -ss "00:30" -i INPUTFILE.mp4 -t 1     -r 10 -s 720x404 frames/my_movie_%03i.png
+--                ^^^^          ^^^       ^^^^     ^^^^^    ^^^^^^^    ^^^^^^^^^^
+--           Start time      input file  how long   FPS       size      output files
+-- --------------------------------------------------------------------
+function PlayMovie (info)
+  movieInfo = info
+
+  if not info then
+    return
+  end -- if
+
+  assert (type (movieInfo) == "table",
+          "Argument to PlayMovie should be a table")
+
+  -- see if already in table
+  if infos [info.filename] then
+    return
+  end -- if already there
+  
+  local gotErrors = false
+
+  -- load each movie frame into memory, if not already done
+  for i = 1, movieInfo.frames do
+    local filename = string.format (movieInfo.filename, i)
+    if not WindowImageInfo(win, filename, 2) then
+       local result = WindowLoadImage(win, filename, filename)
+       if result ~= error_code.eOK then
+         ColourNote ("Red", "", "Could not open move frame file:")
+         ColourNote ("Red", "", "   -> " .. filename)
+         ColourNote ("Red", "", "   Reason: " .. error_desc [result])
+         gotErrors = true
+       end -- if
+    end -- if
+  end -- for each frame
+
+  -- if couldn't do it, discard the movie info
+  if gotErrors then
+    movieInfo = nil
+    return
+  end -- if
+
+  -- otherwise, start at frame 1
+  movieInfo.currentFrame = 1
+
+  -- put into table of infos
+  infos [info.filename] = movieInfo
+  
+end -- PlayMovie
+
+-- --------------------------------------------------------------------
+-- PlayMovieFrame - show current frame, advance count
+-- --------------------------------------------------------------------
+function PlayMovieFrame (movieInfo)
+
+  -- timing stuff
+  timeTaken = timeTaken or 0
+  frameCount = frameCount or 0
+
+  --movieInfo.currentFrame = 1  -- TESTING
+  
+  
+  local startTime = utils.timer ()
+  local filename = string.format (movieInfo.filename, movieInfo.currentFrame)
+  if WindowDrawImage (win, filename, movieInfo.x, movieInfo.y, 0, 0,
+                      miniwin.image_copy) ~= error_code.eOK then
+     ColourNote ("Orange", "", "Could not draw image: " .. imageName)
+  end -- if
+  Redraw () -- force screen update
+
+  -- next frame
+  movieInfo.currentFrame = movieInfo.currentFrame + 1
+  -- wrap
+  if movieInfo.currentFrame > movieInfo.frames then
+    movieInfo.currentFrame = 1
+  end -- if
+
+  -- add up how long we took doing this
+  timeTaken = timeTaken + utils.timer () - startTime
+  -- and how many times
+  frameCount = frameCount + 1
+end -- PlayMovieFrame
+
+
+-- --------------------------------------------------------------------
+-- PlayAllMovieFrames - called by a timer every 1/10 second - calls 
+--                      PlayMovieFrame for each movie in the table 
+-- --------------------------------------------------------------------
+function PlayAllMovieFrames (timerName)
+
+  for k, v in pairs (infos) do
+    PlayMovieFrame (v)
+  end -- for
+
+end -- PlayAllMovieFrames
+
+-- --------------------------------------------------------------------
+-- TestMovie - for testing 
+-- --------------------------------------------------------------------
+function TestMovie (name, line, wildcards)
+
+  if wildcards [1] == "1" then
+    PlayMovie {
+                filename = "worlds\\plugins\\images\\frames\\mr.moti_%03i.png",
+                frames = 8,
+                x = 10,
+                y = 10,
+                }
+  else
+     PlayMovie {
+            filename = "worlds\\plugins\\images\\frames\\my_movie_%03i.png",
+            frames = 2,
+            x = 300,
+            y = 300,
+            }      
+  end -- if
+ 
+end -- TestMovie
+
+]]>
+</script>
+
+</muclient>

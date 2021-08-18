@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE muclient>
+<!-- MuClient version 5.07-pre -->
+<!-- Written by Nick Gammon -->
+<!-- Home Page: http://www.mushclient.com/ -->
+
+<!-- Plugin state saved. Plugin: "CleftMUSH_Helper". World: "Cleft of Dimensions". -->
+
+<muclient>
+
+<!-- variables -->
+
+<variables
+   muclient_version="5.07-pre"
+   world_file_version="15"
+  >
+  <variable name="aard_theme_just_reloading">1</variable>
+  <variable name="enabled">true</variable>
+  <variable name="expanded">expanded = {
+  ["Information about you"] = false,
+  Combat = false,
+  ["Spells and skills"] = false,
+  ["Mapper Window"] = true,
+  Communications = false,
+  ["To do / improvements"] = false,
+  Help = false,
+  Movement = false,
+  ["Group Monitor Window"] = false,
+  }</variable>
+  <variable name="mw_588adf89370b6c3e1259ea7e_windowx">3014</variable>
+  <variable name="mw_588adf89370b6c3e1259ea7e_windowy">171</variable>
+</variables>
+</muclient>

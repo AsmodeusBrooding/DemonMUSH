@@ -1,0 +1,750 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE muclient>
+<!-- MuClient version 5.07-pre -->
+<!-- Written by Nick Gammon -->
+<!-- Home Page: http://www.mushclient.com/ -->
+
+<!-- Plugin state saved. Plugin: "CleftMUSH_Chat_Window". World: "Cleft of Dimensions". -->
+
+<muclient>
+
+<!-- variables -->
+
+<variables
+   muclient_version="5.07-pre"
+   world_file_version="15"
+  >
+  <variable name="WINDOW_HEIGHT">716</variable>
+  <variable name="WINDOW_WIDTH">2116</variable>
+  <variable name="aard_theme_just_reloading">1</variable>
+  <variable name="channels_table">channels_table = {}</variable>
+  <variable name="current_tab">1</variable>
+  <variable name="date_format">[%d %b %H:%M:%S] </variable>
+  <variable name="font_name">Fixedsys Excelsior 3.01</variable>
+  <variable name="font_size">12</variable>
+  <variable name="info_on">0</variable>
+  <variable name="log_colour_codes">1</variable>
+  <variable name="log_timestamps">1</variable>
+  <variable name="log_to_file">0</variable>
+  <variable name="mw_b555825a4a5700c35fa80780_windowx">1687</variable>
+  <variable name="mw_b555825a4a5700c35fa80780_windowy">1227</variable>
+  <variable name="tabs_channel_captures">tabs_channel_captures = {}
+  tabs_channel_captures[1] = {}</variable>
+  <variable name="tabs_names">tabs_names = {}</variable>
+  <variable name="tabs_nonchannel_captures">tabs_nonchannel_captures = {}
+  tabs_nonchannel_captures[1] = {}</variable>
+  <variable name="temp_tabs_data">{
+  [1] = {
+    contents = "{\
+  raw_lines = {\
+    [1] = {\
+      [2] = {\
+        },\
+      [1] = {\
+        [2] = {\
+          bold = false,\
+          backcolour = 0,\
+          length = 1,\
+          textcolour = 12632256,\
+          text = \"[\",\
+          },\
+        [8] = {\
+          bold = false,\
+          backcolour = 0,\
+          length = 0,\
+          textcolour = 12632256,\
+          text = \"\",\
+          },\
+        [5] = {\
+          bold = true,\
+          backcolour = 0,\
+          length = 11,\
+          textcolour = 16777215,\
+          text = \"Vivi says '\",\
+          },\
+        [3] = {\
+          bold = true,\
+          backcolour = 0,\
+          length = 3,\
+          textcolour = 16777215,\
+          text = \"OOC\",\
+          },\
+        [7] = {\
+          bold = true,\
+          backcolour = 0,\
+          length = 1,\
+          textcolour = 16777215,\
+          text = \"'\",\
+          },\
+        [1] = {\
+          bold = false,\
+          backcolour = 0,\
+          length = 18,\
+          textcolour = 12632256,\
+          text = \"[16 Aug 01:15:46] \",\
+          },\
+        [4] = {\
+          bold = false,\
+          backcolour = 0,\
+          length = 2,\
+          textcolour = 12632256,\
+          text = \"] \",\
+          },\
+        [6] = {\
+          bold = true,\
+          backcolour = 0,\
+          length = 2,\
+          textcolour = 4079166,\
+          text = \"hi\",\
+          },\
+        },\
+      },\
+    [2] = {\
+      [2] = {\
+        },\
+      [1] = {\
+        [2] = {\
+          bold = false,\
+          backcolour = 0,\
+          length = 9,\
+          textcolour = 32768,\
+          text = \"You say '\",\
+          },\
+        [5] = {\
+          bold = false,\
+          backcolour = 0,\
+          length = 0,\
+          textcolour = 12632256,\
+          text = \"\",\
+          },\
+        [3] = {\
+          bold = true,\
+          backcolour = 0,\
+          length = 2,\
+          textcolour = 65280,\
+          text = \"hi\",\
+          },\
+        [1] = {\
+          bold = false,\
+          backcolour = 0,\
+          length = 18,\
+          textcolour = 12632256,\
+          text = \"[16 Aug 01:15:57] \",\
+          },\
+        [4] = {\
+          bold = false,\
+          backcolour = 0,\
+          length = 1,\
+          textcolour = 32768,\
+          text = \"'\",\
+          },\
+        },\
+      },\
+    [3] = {\
+      [2] = {\
+        },\
+      [1] = {\
+        [1] = {\
+          bold = false,\
+          backcolour = 0,\
+          length = 18,\
+          textcolour = 12632256,\
+          text = \"[17 Aug 11:40:19] \",\
+          },\
+        [2] = {\
+          bold = false,\
+          backcolour = 0,\
+          length = 9,\
+          textcolour = 32768,\
+          text = \"You say '\",\
+          },\
+        [3] = {\
+          bold = true,\
+          backcolour = 0,\
+          length = 70,\
+          textcolour = 65280,\
+          text = \"lol this breastplate has no stats, its literally worse than the tshirt\",\
+          },\
+        [4] = {\
+          bold = false,\
+          backcolour = 0,\
+          length = 1,\
+          textcolour = 32768,\
+          text = \"'\",\
+          },\
+        [5] = {\
+          bold = false,\
+          backcolour = 0,\
+          length = 0,\
+          textcolour = 12632256,\
+          text = \"\",\
+          },\
+        },\
+      },\
+    [4] = {\
+      [2] = {\
+        },\
+      [1] = {\
+        [1] = {\
+          bold = false,\
+          backcolour = 0,\
+          length = 18,\
+          textcolour = 12632256,\
+          text = \"[17 Aug 11:41:33] \",\
+          },\
+        [2] = {\
+          bold = false,\
+          backcolour = 0,\
+          length = 9,\
+          textcolour = 32768,\
+          text = \"You say '\",\
+          },\
+        [3] = {\
+          bold = true,\
+          backcolour = 0,\
+          length = 8,\
+          textcolour = 65280,\
+          text = \"took wat\",\
+          },\
+        [4] = {\
+          bold = false,\
+          backcolour = 0,\
+          length = 1,\
+          textcolour = 32768,\
+          text = \"'\",\
+          },\
+        [5] = {\
+          bold = false,\
+          backcolour = 0,\
+          length = 0,\
+          textcolour = 12632256,\
+          text = \"\",\
+          },\
+        },\
+      },\
+    [5] = {\
+      [2] = {\
+        },\
+      [1] = {\
+        [1] = {\
+          bold = false,\
+          backcolour = 0,\
+          length = 18,\
+          textcolour = 12632256,\
+          text = \"[17 Aug 11:41:38] \",\
+          },\
+        [2] = {\
+          bold = false,\
+          backcolour = 0,\
+          length = 9,\
+          textcolour = 32768,\
+          text = \"You say '\",\
+          },\
+        [3] = {\
+          bold = true,\
+          backcolour = 0,\
+          length = 10,\
+          textcolour = 65280,\
+          text = \"yeah i did\",\
+          },\
+        [4] = {\
+          bold = false,\
+          backcolour = 0,\
+          length = 1,\
+          textcolour = 32768,\
+          text = \"'\",\
+          },\
+        [5] = {\
+          bold = false,\
+          backcolour = 0,\
+          length = 0,\
+          textcolour = 12632256,\
+          text = \"\",\
+          },\
+        },\
+      },\
+    [6] = {\
+      [2] = {\
+        },\
+      [1] = {\
+        [1] = {\
+          bold = false,\
+          backcolour = 0,\
+          length = 18,\
+          textcolour = 12632256,\
+          text = \"[17 Aug 11:41:44] \",\
+          },\
+        [2] = {\
+          bold = false,\
+          backcolour = 0,\
+          length = 9,\
+          textcolour = 32768,\
+          text = \"You say '\",\
+          },\
+        [3] = {\
+          bold = true,\
+          backcolour = 0,\
+          length = 46,\
+          textcolour = 65280,\
+          text = \"i want to remembr to fix it to soething useful\",\
+          },\
+        [4] = {\
+          bold = false,\
+          backcolour = 0,\
+          length = 1,\
+          textcolour = 32768,\
+          text = \"'\",\
+          },\
+        [5] = {\
+          bold = false,\
+          backcolour = 0,\
+          length = 0,\
+          textcolour = 12632256,\
+          text = \"\",\
+          },\
+        },\
+      },\
+    [7] = {\
+      [2] = {\
+        },\
+      [1] = {\
+        [1] = {\
+          bold = false,\
+          backcolour = 0,\
+          length = 18,\
+          textcolour = 12632256,\
+          text = \"[17 Aug 11:41:48] \",\
+          },\
+        [2] = {\
+          bold = false,\
+          backcolour = 0,\
+          length = 9,\
+          textcolour = 32768,\
+          text = \"You say '\",\
+          },\
+        [3] = {\
+          bold = true,\
+          backcolour = 0,\
+          length = 9,\
+          textcolour = 65280,\
+          text = \"something\",\
+          },\
+        [4] = {\
+          bold = false,\
+          backcolour = 0,\
+          length = 1,\
+          textcolour = 32768,\
+          text = \"'\",\
+          },\
+        [5] = {\
+          bold = false,\
+          backcolour = 0,\
+          length = 0,\
+          textcolour = 12632256,\
+          text = \"\",\
+          },\
+        },\
+      },\
+    [8] = {\
+      [2] = {\
+        },\
+      [1] = {\
+        [1] = {\
+          bold = false,\
+          backcolour = 0,\
+          length = 18,\
+          textcolour = 12632256,\
+          text = \"[17 Aug 11:42:03] \",\
+          },\
+        [2] = {\
+          bold = false,\
+          backcolour = 0,\
+          length = 9,\
+          textcolour = 32768,\
+          text = \"You say '\",\
+          },\
+        [3] = {\
+          bold = true,\
+          backcolour = 0,\
+          length = 53,\
+          textcolour = 65280,\
+          text = \"especially when its called BREASTPLATE OF DESTRUCTION\",\
+          },\
+        [4] = {\
+          bold = false,\
+          backcolour = 0,\
+          length = 1,\
+          textcolour = 32768,\
+          text = \"'\",\
+          },\
+        [5] = {\
+          bold = false,\
+          backcolour = 0,\
+          length = 0,\
+          textcolour = 12632256,\
+          text = \"\",\
+          },\
+        },\
+      },\
+    [9] = {\
+      [2] = {\
+        },\
+      [1] = {\
+        [1] = {\
+          bold = false,\
+          backcolour = 0,\
+          length = 18,\
+          textcolour = 12632256,\
+          text = \"[17 Aug 11:42:12] \",\
+          },\
+        [2] = {\
+          bold = false,\
+          backcolour = 0,\
+          length = 9,\
+          textcolour = 32768,\
+          text = \"You say '\",\
+          },\
+        [3] = {\
+          bold = true,\
+          backcolour = 0,\
+          length = 45,\
+          textcolour = 65280,\
+          text = \"and its like the least destructive thing ever\",\
+          },\
+        [4] = {\
+          bold = false,\
+          backcolour = 0,\
+          length = 1,\
+          textcolour = 32768,\
+          text = \"'\",\
+          },\
+        [5] = {\
+          bold = false,\
+          backcolour = 0,\
+          length = 0,\
+          textcolour = 12632256,\
+          text = \"\",\
+          },\
+        },\
+      },\
+    [10] = {\
+      [2] = {\
+        },\
+      [1] = {\
+        [1] = {\
+          bold = false,\
+          backcolour = 0,\
+          length = 18,\
+          textcolour = 12632256,\
+          text = \"[17 Aug 11:42:31] \",\
+          },\
+        [2] = {\
+          bold = false,\
+          backcolour = 0,\
+          length = 9,\
+          textcolour = 32768,\
+          text = \"You say '\",\
+          },\
+        [3] = {\
+          bold = true,\
+          backcolour = 0,\
+          length = 69,\
+          textcolour = 65280,\
+          text = \"if its the breastplate of destroying your hopes and dreams, it got me\",\
+          },\
+        [4] = {\
+          bold = false,\
+          backcolour = 0,\
+          length = 1,\
+          textcolour = 32768,\
+          text = \"'\",\
+          },\
+        [5] = {\
+          bold = false,\
+          backcolour = 0,\
+          length = 0,\
+          textcolour = 12632256,\
+          text = \"\",\
+          },\
+        },\
+      },\
+    [11] = {\
+      [2] = {\
+        },\
+      [1] = {\
+        [1] = {\
+          bold = false,\
+          backcolour = 0,\
+          length = 18,\
+          textcolour = 12632256,\
+          text = \"[17 Aug 18:08:47] \",\
+          },\
+        [2] = {\
+          bold = true,\
+          backcolour = 0,\
+          length = 20,\
+          textcolour = 65280,\
+          text = \"You tell the group '\",\
+          },\
+        [3] = {\
+          bold = true,\
+          backcolour = 0,\
+          length = 1,\
+          textcolour = 16777215,\
+          text = \" \",\
+          },\
+        [4] = {\
+          bold = true,\
+          backcolour = 0,\
+          length = 1,\
+          textcolour = 4079166,\
+          text = \"(\",\
+          },\
+        [5] = {\
+          bold = true,\
+          backcolour = 0,\
+          length = 1,\
+          textcolour = 16711935,\
+          text = \"R\",\
+          },\
+        [6] = {\
+          bold = false,\
+          backcolour = 0,\
+          length = 1,\
+          textcolour = 8388736,\
+          text = \"A\",\
+          },\
+        [7] = {\
+          bold = true,\
+          backcolour = 0,\
+          length = 1,\
+          textcolour = 16711935,\
+          text = \"R\",\
+          },\
+        [8] = {\
+          bold = false,\
+          backcolour = 0,\
+          length = 1,\
+          textcolour = 8388736,\
+          text = \"E\",\
+          },\
+        [9] = {\
+          bold = true,\
+          backcolour = 0,\
+          length = 2,\
+          textcolour = 4079166,\
+          text = \") \",\
+          },\
+        [10] = {\
+          bold = true,\
+          backcolour = 0,\
+          length = 1,\
+          textcolour = 255,\
+          text = \"H\",\
+          },\
+        [11] = {\
+          bold = false,\
+          backcolour = 0,\
+          length = 1,\
+          textcolour = 128,\
+          text = \"e\",\
+          },\
+        [12] = {\
+          bold = true,\
+          backcolour = 0,\
+          length = 1,\
+          textcolour = 255,\
+          text = \"a\",\
+          },\
+        [13] = {\
+          bold = false,\
+          backcolour = 0,\
+          length = 2,\
+          textcolour = 128,\
+          text = \"t \",\
+          },\
+        [14] = {\
+          bold = true,\
+          backcolour = 0,\
+          length = 1,\
+          textcolour = 255,\
+          text = \"R\",\
+          },\
+        [15] = {\
+          bold = false,\
+          backcolour = 0,\
+          length = 1,\
+          textcolour = 128,\
+          text = \"i\",\
+          },\
+        [16] = {\
+          bold = true,\
+          backcolour = 0,\
+          length = 1,\
+          textcolour = 255,\
+          text = \"n\",\
+          },\
+        [17] = {\
+          bold = false,\
+          backcolour = 0,\
+          length = 2,\
+          textcolour = 128,\
+          text = \"g'\",\
+          },\
+        [18] = {\
+          bold = false,\
+          backcolour = 0,\
+          length = 0,\
+          textcolour = 12632256,\
+          text = \"\",\
+          },\
+        },\
+      },\
+    [12] = {\
+      [2] = {\
+        },\
+      [1] = {\
+        [1] = {\
+          bold = false,\
+          backcolour = 0,\
+          length = 18,\
+          textcolour = 12632256,\
+          text = \"[17 Aug 19:19:19] \",\
+          },\
+        [2] = {\
+          bold = true,\
+          backcolour = 0,\
+          length = 169,\
+          textcolour = 65280,\
+          text = \"You tell the group 'iniqsndiosdoidos dqidioqs djoqoidjocdiodsdqscdioqs cdoqsj cq iocd qsiodsicdqisdsicdsqiocdqsoicdjqsoidqsiocdjqsoi dqsoicdqsoicdsiod qiodqsiocd qsiocq'\",\
+          },\
+        [3] = {\
+          bold = false,\
+          backcolour = 0,\
+          length = 0,\
+          textcolour = 12632256,\
+          text = \"\",\
+          },\
+        },\
+      },\
+    [13] = {\
+      [2] = {\
+        },\
+      [1] = {\
+        [1] = {\
+          bold = false,\
+          backcolour = 0,\
+          length = 18,\
+          textcolour = 12632256,\
+          text = \"[17 Aug 19:20:17] \",\
+          },\
+        [2] = {\
+          bold = true,\
+          backcolour = 0,\
+          length = 169,\
+          textcolour = 65280,\
+          text = \"You tell the group 'iniqsndiosdoidos dqidioqs djoqoidjocdiodsdqscdioqs cdoqsj cq iocd qsiodsicdqisdsicdsqiocdqsoicdjqsoidqsiocdjqsoi dqsoicdqsoicdsiod qiodqsiocd qsiocq'\",\
+          },\
+        [3] = {\
+          bold = false,\
+          backcolour = 0,\
+          length = 0,\
+          textcolour = 12632256,\
+          text = \"\",\
+          },\
+        },\
+      },\
+    [14] = {\
+      [2] = {\
+        },\
+      [1] = {\
+        [1] = {\
+          bold = false,\
+          backcolour = 0,\
+          length = 18,\
+          textcolour = 12632256,\
+          text = \"[17 Aug 23:03:29] \",\
+          },\
+        [2] = {\
+          bold = false,\
+          backcolour = 0,\
+          length = 66,\
+          textcolour = 12632256,\
+          text = \"You say 'I have 2061/2061 hp 953/953 mana 1054/1054 mv 258375 xp.'\",\
+          },\
+        },\
+      },\
+    [15] = {\
+      [2] = {\
+        },\
+      [1] = {\
+        [1] = {\
+          bold = false,\
+          backcolour = 0,\
+          length = 18,\
+          textcolour = 12632256,\
+          text = \"[17 Aug 23:56:46] \",\
+          },\
+        [2] = {\
+          bold = true,\
+          backcolour = 0,\
+          length = 23,\
+          textcolour = 65280,\
+          text = \"You tell the group 'hi'\",\
+          },\
+        [3] = {\
+          bold = false,\
+          backcolour = 0,\
+          length = 0,\
+          textcolour = 12632256,\
+          text = \"\",\
+          },\
+        },\
+      },\
+    [16] = {\
+      [2] = {\
+        },\
+      [1] = {\
+        [1] = {\
+          bold = false,\
+          backcolour = 0,\
+          length = 18,\
+          textcolour = 12632256,\
+          text = \"[18 Aug 02:01:15] \",\
+          },\
+        [2] = {\
+          bold = false,\
+          backcolour = 0,\
+          length = 25,\
+          textcolour = 12632256,\
+          text = \"You say 'Return to Flesh'\",\
+          },\
+        },\
+      },\
+    [17] = {\
+      [2] = {\
+        },\
+      [1] = {\
+        [1] = {\
+          bold = false,\
+          backcolour = 0,\
+          length = 18,\
+          textcolour = 12632256,\
+          text = \"[18 Aug 02:01:22] \",\
+          },\
+        [2] = {\
+          bold = false,\
+          backcolour = 0,\
+          length = 25,\
+          textcolour = 12632256,\
+          text = \"You say 'Return to Flesh'\",\
+          },\
+        },\
+      },\
+    },\
+  start_line = 1,\
+  }",
+    },
+  }</variable>
+</variables>
+</muclient>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE muclient>
+<!-- MuClient version 5.07-pre -->
+<!-- Written by Nick Gammon -->
+<!-- Home Page: http://www.mushclient.com/ -->
+
+<!-- Plugin state saved. Plugin: "Action_Bar". World: "Cleft of Dimensions". -->
+
+<muclient>
+
+<!-- variables -->
+
+<variables
+   muclient_version="5.07-pre"
+   world_file_version="15"
+  >
+  <variable name="enabled">true</variable>
+  <variable name="mode">6</variable>
+  <variable name="pos_x">100</variable>
+  <variable name="pos_y">100</variable>
+  <variable name="saved_buttons">buttons = {}
+  buttons[1] = {}
+    buttons[1].tooltip = "Right click here to customize"
+    buttons[1].cooldown = 0
+    buttons[1].send = ""
+    buttons[1].sound = ""
+    buttons[1].name = "Button1"
+    buttons[1].text = "1"
+  buttons[2] = {}
+    buttons[2].tooltip = "Right click here to customize"
+    buttons[2].cooldown = 0
+    buttons[2].send = ""
+    buttons[2].sound = ""
+    buttons[2].name = "Button2"
+    buttons[2].text = "2"
+  buttons[3] = {}
+    buttons[3].tooltip = "Right click here to customize"
+    buttons[3].cooldown = 0
+    buttons[3].send = ""
+    buttons[3].sound = ""
+    buttons[3].name = "Button3"
+    buttons[3].text = "3"
+  buttons[4] = {}
+    buttons[4].tooltip = "Right click here to customize"
+    buttons[4].cooldown = 0
+    buttons[4].send = ""
+    buttons[4].sound = ""
+    buttons[4].name = "Button4"
+    buttons[4].text = "4"
+  buttons[5] = {}
+    buttons[5].tooltip = "Right click here to customize"
+    buttons[5].cooldown = 0
+    buttons[5].send = ""
+    buttons[5].sound = ""
+    buttons[5].name = "Button5"
+    buttons[5].text = "5"
+  buttons[6] = {}
+    buttons[6].tooltip = "Right click here to customize"
+    buttons[6].cooldown = 0
+    buttons[6].send = ""
+    buttons[6].sound = ""
+    buttons[6].name = "Button6"
+    buttons[6].text = "6"
+  buttons[7] = {}
+    buttons[7].tooltip = "Right click here to customize"
+    buttons[7].cooldown = 0
+    buttons[7].send = ""
+    buttons[7].sound = ""
+    buttons[7].name = "Button7"
+    buttons[7].text = "7"
+  buttons[8] = {}
+    buttons[8].tooltip = "Right click here to customize"
+    buttons[8].cooldown = 0
+    buttons[8].send = ""
+    buttons[8].sound = ""
+    buttons[8].name = "Button8"
+    buttons[8].text = "8"
+  buttons[9] = {}
+    buttons[9].tooltip = "Right click here to customize"
+    buttons[9].cooldown = 0
+    buttons[9].send = ""
+    buttons[9].sound = ""
+    buttons[9].name = "Button9"
+    buttons[9].text = "9"</variable>
+  <variable name="windowflags">0</variable>
+</variables>
+</muclient>

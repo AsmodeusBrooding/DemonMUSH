@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE muclient>
+<!-- MuClient version 5.07-pre -->
+<!-- Written by Nick Gammon -->
+<!-- Home Page: http://www.mushclient.com/ -->
+
+<!-- Plugin state saved. Plugin: "CleftMUSH_Group_Window". World: "Cleft of Dimensions". -->
+
+<muclient>
+
+<!-- variables -->
+
+<variables
+   muclient_version="5.07-pre"
+   world_file_version="15"
+  >
+  <variable name="bar_width">388</variable>
+  <variable name="compact_mode">0</variable>
+  <variable name="debug_state">false</variable>
+  <variable name="enemy_hp_color">red</variable>
+  <variable name="false">false</variable>
+  <variable name="font_name">Fixedsys Excelsior 3.01</variable>
+  <variable name="font_size">12</variable>
+  <variable name="hp_bar_border">65535</variable>
+  <variable name="hp_color">65535</variable>
+  <variable name="mana_color">#3333ff</variable>
+  <variable name="moves_color">gold</variable>
+  <variable name="myname">Asmodeus</variable>
+  <variable name="overlay_pct">1</variable>
+  <variable name="pos_x">0</variable>
+  <variable name="pos_y">1354</variable>
+  <variable name="show_mana">1</variable>
+  <variable name="show_minions">1</variable>
+  <variable name="show_moves">1</variable>
+  <variable name="show_numbers">0</variable>
+  <variable name="thresh1active">1</variable>
+  <variable name="thresh1color">yellow</variable>
+  <variable name="thresh1percent">50</variable>
+  <variable name="thresh2active">1</variable>
+  <variable name="thresh2color">red</variable>
+  <variable name="thresh2percent">25</variable>
+  <variable name="top">15.2</variable>
+  <variable name="win_height">502</variable>
+  <variable name="win_width">1785</variable>
+</variables>
+</muclient>

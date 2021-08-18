@@ -1,0 +1,156 @@
+========================================================================
+====================== DemonMUSH 2.51 Change Log =======================
+=====================     February 28, 2019      =======================
+========================================================================
+Hey guys, I'm excited to share a HUGE update to the client, 
+with tons of great new features, and enhancements to old features.
+As always, let me know if you find any oddities, or if you have any
+questions, comments, concerns, or ideas. Here are a few of the changes:
+
+========================================================================
+========================       MAPPER       ============================
+========================================================================
+Made the automapper unspoofable: The mapper will now fill up if
+you're being dragged by groupmates, if you retreat, if you are feared, 
+or if any other possible way of movement happens.
+
+Added auto instance removal, and an instances tab in the Utility Window.
+(Expect a more pleasing aesthetic look to the instance tab eventually)
+You can automatically switch to the instances tab by typing "ins", or 
+you can click on the tab itself.
+
+Notes able to be added to a room via mapper addnote. When you walk into
+a room, the note will automatically be displayed. Also, you can hover 
+over a room on the map instead, to view the note without going into the 
+room. This helps with things like "mob loads XX here", or "there is a 
+hidden exit down from here", or "this key goes to XX room".
+
+Any broken exits now automatically fix when you walk through the rooms,
+instead of having to straight up delete the rooms, but if you want to 
+delete the rooms also, they autorefresh and are much easier to work with.
+
+The mapper backup happens every 8 hours now, instead of every 24.
+
+========================================================================
+========================       GAUGES       ============================
+========================================================================
+
+Enemy health % has been added to the gauge lineup!
+
+The gauge window can now be resized, and all of the bars will resize
+with it!
+
+Right click functionality has been added, to allow users to change the
+colors of the gauges on the fly!
+
+The gauge window is now supported by themes, which can be changed with 
+the "demon theme change" command, and will adjust with all of the other
+windows.
+
+========================================================================
+========================        CHAT        ============================
+========================================================================
+Notifications of Double Exp, and Double Exp Cap have been added, along 
+with friend posts, events, and quests. 
+
+Notifies from the notify channel have been added, as well as ElderTell.
+
+Improved the time stamp to be more aesthetic, and save space.
+
+========================================================================
+========================    GROUP MONITOR    ===========================
+========================================================================
+Added the GROUP MONITOR MiniWindow, which allows you to monitor the 
+health of your group mates, and minions. There is a TON of cool
+functionality available via right click, so be sure to check out all of
+the available options.
+You can even see which person is Leader, Tank, and even NOMELEE.
+
+========================================================================
+=========================      UTILITY       ===========================
+========================================================================
+EQ TAB
+------------------------------------------------------------------------
+Eq window updated to have less oddity when switching eq via EQSET, or 
+remove all/rem all, and wear all.
+
+Sounds added to make wearing eq more pleasant.
+------------------------------------------------------------------------
+AFF TAB
+------------------------------------------------------------------------
+Fixed some weirdness with permanent objects: some may still exist. 
+Please let me know if you see any oddity.
+------------------------------------------------------------------------
+INSTANCE TAB
+------------------------------------------------------------------------
+Added the instances tab, which can be hotkeyed to via typing ins, or
+clicking directly on it. This tab shows which instances are open still,
+and the timer left on the instance. After the timer runs out, your
+instance will automatically be deleted from the mapper. This cleans up
+one of the massive issues with the previous version of the mapper with
+instances stacking on top of each other.
+
+========================================================================
+========================    KXWT HANDLER    ============================
+========================================================================
+Tons of sounds, music, and coloring added, as well as more gags of kxwt
+info. Coloring has been added to skills that are important to see during
+the spam of combat, and also on things that seem aesthetically pleasing.
+
+If you want to mute any music playing, you can simply type "mute".
+
+In the next update we will add functionality to config the music and
+sounds all off or all on. For now, you can just mute or lower the sounds 
+in the mixer, if you don't want to hear them, or think they're too loud.
+
+========================================================================
+========================     EXP TRACKER     ===========================
+========================================================================
+
+An EXP Tracker has been added! 
+The commands are as follows:
+track help' or 'txp help'- Shows this help file.
+'track exp' or 'txp' - Toggles exp tracking.
+'brag <channel> track' or 'brag <channel> txp' - Brags marking time and
+exp total to desired channel.
+'show my track' or 'show txp' - Shows marking time and exp total.
+
+The next update will show what you spent your xp on as well, like 
+practices, microlevels, levels, etc, and will show your previous few
+tracks, to be able to compare them.
+
+========================================================================
+========================      MOB KILLS      ===========================
+========================================================================
+This plugin has been created and added to count how many mobs you've
+killed. It also shows the mob names, and when the last time you've 
+killed those mobs is.
+
+You can use "show kills" to show the mobs killed, or "reset kills" to 
+reset the mobs killed. You can also use "add kills %1 %2", where %1 is 
+the mob name, and %2 is the amount of times you've killed it. 
+
+========================================================================
+========================      WAYPOINTS      ===========================
+========================================================================
+
+DemonMUSH Waypoints added, courtesy of Lord Soth!
+You can now easily get from one waypoint to another, from any location,
+without sitting there spamming waypoints and bridges a million times.
+
+Type "demon way help" for details.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

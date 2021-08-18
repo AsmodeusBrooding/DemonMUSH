@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE muclient>
+<!-- MuClient version 5.07-pre -->
+<!-- Written by Nick Gammon -->
+<!-- Home Page: http://www.mushclient.com/ -->
+
+<!-- Plugin state saved. Plugin: "CleftMUSH_Text_Substitutions". World: "Cleft of Dimensions". -->
+
+<muclient>
+
+<!-- variables -->
+
+<variables
+   muclient_version="5.07-pre"
+   world_file_version="15"
+  >
+  <variable name="gags">gags = {}</variable>
+  <variable name="subs">subs = {}
+  subs[1] = {}
+    subs[1].original = "fort:"
+    subs[1].fromstr = "[Ff][Oo][Rr][Tt]:"
+    subs[1].nocase = true
+    subs[1].use_function = false
+    subs[1].tostr = "fort."
+    subs[1].alone = false
+  subs[2] = {}
+    subs[2].original = "reads:"
+    subs[2].fromstr = "[Rr][Ee][Aa][Dd][Ss]:"
+    subs[2].nocase = true
+    subs[2].use_function = false
+    subs[2].tostr = "reads..."
+    subs[2].alone = false
+  subs[3] = {}
+    subs[3].original = "figure:"
+    subs[3].fromstr = "[Ff][Ii][Gg][Uu][Rr][Ee]:"
+    subs[3].nocase = true
+    subs[3].use_function = false
+    subs[3].tostr = "figure..."
+    subs[3].alone = false
+  subs[4] = {}
+    subs[4].original = "directions:"
+    subs[4].fromstr = "[Dd][Ii][Rr][Ee][Cc][Tt][Ii][Oo][Nn][Ss]:"
+    subs[4].nocase = true
+    subs[4].use_function = false
+    subs[4].tostr = "directions.."
+    subs[4].alone = false
+  subs[5] = {}
+    subs[5].original = "that:"
+    subs[5].fromstr = "[Tt][Hh][Aa][Tt]:"
+    subs[5].nocase = true
+    subs[5].use_function = false
+    subs[5].tostr = "that.."
+    subs[5].alone = false
+  subs[6] = {}
+    subs[6].original = "Paradise:"
+    subs[6].fromstr = "[Pp][Aa][Rr][Aa][Dd][Ii][Ss][Ee]:"
+    subs[6].nocase = true
+    subs[6].use_function = false
+    subs[6].tostr = "Paradise.."
+    subs[6].alone = false
+  subs[7] = {}
+    subs[7].original = "decoration:"
+    subs[7].fromstr = "[Dd][Ee][Cc][Oo][Rr][Aa][Tt][Ii][Oo][Nn]:"
+    subs[7].nocase = true
+    subs[7].use_function = false
+    subs[7].tostr = "decoration.."
+    subs[7].alone = false
+  subs[8] = {}
+    subs[8].original = "Castle:"
+    subs[8].fromstr = "[Cc][Aa][Ss][Tt][Ll][Ee]:"
+    subs[8].nocase = true
+    subs[8].use_function = false
+    subs[8].tostr = "Castle.."
+    subs[8].alone = false
+  subs[9] = {}
+    subs[9].original = "Shop:"
+    subs[9].fromstr = "[Ss][Hh][Oo][Pp]:"
+    subs[9].nocase = true
+    subs[9].use_function = false
+    subs[9].tostr = "Shop.."
+    subs[9].alone = false
+  subs[10] = {}
+    subs[10].original = "Destination:"
+    subs[10].fromstr = "[Dd][Ee][Ss][Tt][Ii][Nn][Aa][Tt][Ii][Oo][Nn]:"
+    subs[10].nocase = true
+    subs[10].use_function = false
+    subs[10].tostr = "Destination.."
+    subs[10].alone = false
+  subs[11] = {}
+    subs[11].original = "unremarkable:"
+    subs[11].fromstr = "[Uu][Nn][Rr][Ee][Mm][Aa][Rr][Kk][Aa][Bb][Ll][Ee]:"
+    subs[11].nocase = true
+    subs[11].use_function = false
+    subs[11].tostr = "unremarkable.."
+    subs[11].alone = false
+  subs[12] = {}
+    subs[12].original = "B:"
+    subs[12].fromstr = "[Bb]:"
+    subs[12].nocase = true
+    subs[12].use_function = false
+    subs[12].tostr = "B.."
+    subs[12].alone = false
+  subs[13] = {}
+    subs[13].original = "Sand:"
+    subs[13].fromstr = "[Ss][Aa][Nn][Dd]:"
+    subs[13].nocase = true
+    subs[13].use_function = false
+    subs[13].tostr = "Sand.."
+    subs[13].alone = false
+  subs[14] = {}
+    subs[14].original = "Wall:"
+    subs[14].fromstr = "Wall:"
+    subs[14].nocase = false
+    subs[14].use_function = false
+    subs[14].tostr = "Wall.."
+    subs[14].alone = false
+  subs[15] = {}
+    subs[15].original = "Tavern:"
+    subs[15].fromstr = "[Tt][Aa][Vv][Ee][Rr][Nn]:"
+    subs[15].nocase = true
+    subs[15].use_function = false
+    subs[15].tostr = "Tavern.."
+    subs[15].alone = false
+  subs[16] = {}
+    subs[16].original = "glowing:"
+    subs[16].fromstr = "[Gg][Ll][Oo][Ww][Ii][Nn][Gg]:"
+    subs[16].nocase = true
+    subs[16].use_function = false
+    subs[16].tostr = "glowing.."
+    subs[16].alone = false
+  subs[17] = {}
+    subs[17].original = "out:"
+    subs[17].fromstr = "[Oo][Uu][Tt]:"
+    subs[17].nocase = true
+    subs[17].use_function = false
+    subs[17].tostr = "out.."
+    subs[17].alone = false
+  subs[18] = {}
+    subs[18].original = "Tools:"
+    subs[18].fromstr = "[Tt][Oo][Oo][Ll][Ss]:"
+    subs[18].nocase = true
+    subs[18].use_function = false
+    subs[18].tostr = "Tools.."
+    subs[18].alone = false
+  subs[19] = {}
+    subs[19].original = "place:"
+    subs[19].fromstr = "[Pp][Ll][Aa][Cc][Ee]:"
+    subs[19].nocase = true
+    subs[19].use_function = false
+    subs[19].tostr = "place.."
+    subs[19].alone = false
+  subs[20] = {}
+    subs[20].original = "  ','.;'. ,,'.,.;'.,'.;'.',',`';`;.`'',',',,,'..;'.',',';.`','.;'..;'.,"
+    subs[20].fromstr = "  ','.;'. ,,'.,.;'.,'.;'.',',`';`;.`'',',',,,'..;'.',',';.`','.;'..;'.,"
+    subs[20].nocase = false
+    subs[20].use_function = false
+    subs[20].tostr = "Ant Nursery"
+    subs[20].alone = false</variable>
+</variables>
+</muclient>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE muclient>
+<!-- MuClient version 5.07-pre -->
+<!-- Written by Nick Gammon -->
+<!-- Home Page: http://www.mushclient.com/ -->
+
+<!-- Plugin state saved. Plugin: "Miniwindow_Z_Order_Monitor". World: "Cleft of Dimensions". -->
+
+<muclient>
+
+<!-- variables -->
+
+<variables
+   muclient_version="5.07-pre"
+   world_file_version="15"
+  >
+  <variable name="a">5</variable>
+  <variable name="a1c17ac2c83b2b66c402c80c6_mapper">7</variable>
+  <variable name="a1c17ac2c83b2b66c402c80c6_z_config_win">8</variable>
+  <variable name="a48062dcd6b934c480df53c68">3</variable>
+  <variable name="a48062dcd6b934c590df53c68">5</variable>
+  <variable name="a48062dcd6b934c590df53f67">3</variable>
+  <variable name="a48062dcd6b934c590df53f67AA_Multi_Bar_Miniwindow">7</variable>
+  <variable name="a7c54b861a8cd3c4745c28834_mapper">6</variable>
+  <variable name="a7c54b861a8cd3c4745c28834_z_config_win">7</variable>
+  <variable name="aa80b38e2f618fbda79a6440c_mapper">7</variable>
+  <variable name="aa80b38e2f618fbda79a6440c_z_config_win">8</variable>
+  <variable name="ab555825a4a5700c35fa80780">8</variable>
+  <variable name="ab555825a4a5720c35fa80780">4</variable>
+  <variable name="ab6eae87ccedd84f510b74714_mapper">2</variable>
+  <variable name="ab6eae87ccedd84f510b74714_z_config_win">3</variable>
+  <variable name="aca81c6d49fc8651517f995ab">9</variable>
+  <variable name="add07d6dbe73fe0bd02ddb62c_alphaimages">10</variable>
+  <variable name="add07d6dbe73fe0bd02ddb62c_mapper">4</variable>
+  <variable name="add07d6dbe73fe0bd02ddb62c_z_config_win">3</variable>
+  <variable name="add07d6dbe73fe0bd02ddb63d_mapper">3</variable>
+  <variable name="add07d6dbe73fe0bd02ddb63d_z_config_win">4</variable>
+  <variable name="ae2dc05642ff5f4fec6cf039e">6</variable>
+  <variable name="ae50b1d08a0cfc0ee9c44947b">7</variable>
+  <variable name="aextender_gui_3f498d929793c12cb70f5999">11</variable>
+  <variable name="af178e68512c685b3be1e9b07">11</variable>
+  <variable name="af178e68512c735b3be1e9b07">7</variable>
+  <variable name="awin_353de94ba6c42060d839e256">2</variable>
+  <variable name="awin_353de94ba6c43260d839e238">9</variable>
+  <variable name="awin_353de94ba6c43260d839e256">7</variable>
+  <variable name="awin_48062dcd6b934c480df53c68">8</variable>
+  <variable name="awin_48062dcd6b934c590df53c68">6</variable>
+  <variable name="awindow_ca81c6d49fc8651517f995ab">10</variable>
+</variables>
+</muclient>

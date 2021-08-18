@@ -1,0 +1,2378 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE muclient>
+<!-- MuClient version 5.07-pre -->
+<!-- Written by Nick Gammon -->
+<!-- Home Page: http://www.mushclient.com/ -->
+<muclient>
+<world
+   muclient_version="5.07-pre"
+   world_file_version="15"
+
+   auto_say_override_prefix="-"
+   auto_say_string="say "
+   chat_name="Asmodeus"
+   chat_message_prefix="[CleftMUSH] "
+   command_stack_character=";"
+   id="d228514a9d7ad68afe6591db"
+   input_font_name="Fixedsys Excelsior 3.01"
+   mapping_failure="Alas, you cannot go that way."
+   name="Cleft of Dimensions"
+   new_activity_sound="(No sound)"
+   output_font_name="Fixedsys Excelsior 3.01"
+   script_editor="notepad"
+   script_editor_argument="%file"
+   script_language="Lua"
+   script_prefix="\\\"
+   site="localhost"
+   spam_message="look"
+   speed_walk_prefix="#"
+   terminal_identification="MUSHclient-Aard"
+
+   arrows_change_history="y"
+   auto_pause="y"
+   auto_resize_minimum_lines="1"
+   auto_resize_maximum_lines="20"
+   chat_foreground_colour="red"
+   chat_background_colour="black"
+   chat_port="4050"
+   confirm_on_paste="y"
+   confirm_on_send="y"
+   default_trigger_sequence="100"
+   default_alias_sequence="100"
+   detect_pueblo="y"
+   echo_hyperlink_in_output_window="y"
+   edit_script_with_notepad="y"
+   enable_aliases="y"
+   enable_beeps="y"
+   enable_command_stack="y"
+   enable_scripts="y"
+   enable_timers="y"
+   enable_triggers="y"
+   enable_trigger_sounds="y"
+   fade_output_opacity_percent="20"
+   fade_output_seconds="8"
+   history_lines="1000"
+   hyperlink_adds_to_command_history="y"
+   hyperlink_colour="mediumslateblue"
+   indent_paras="y"
+   input_background_colour="#1E1E1E"
+   input_font_height="12"
+   input_font_weight="400"
+   input_font_charset="1"
+   input_text_colour="white"
+   keypad_enable="y"
+   log_input="y"
+   log_notes="y"
+   log_output="y"
+   max_output_lines="500000"
+   mud_can_change_link_colour="y"
+   mud_can_change_options="y"
+   note_text_colour="#040000"
+   omit_date_from_save_files="y"
+   output_font_height="12"
+   output_font_weight="400"
+   paste_delay_per_lines="1"
+   pixel_offset="1"
+   port="9000"
+   proxy_port="1080"
+   script_errors_to_output_window="y"
+   send_file_delay_per_lines="1"
+   send_mxp_afk_response="y"
+   show_connect_disconnect="y"
+   show_italic="y"
+   show_underline="y"
+   spam_line_count="20"
+   tab_completion_lines="200"
+   timestamp_input_text_colour="maroon"
+   timestamp_notes_text_colour="aqua"
+   timestamp_output_text_colour="white"
+   timestamp_input_back_colour="#151515"
+   timestamp_notes_back_colour="#151515"
+   timestamp_output_back_colour="#151515"
+   tool_tip_visible_time="10000"
+   tool_tip_start_time="400"
+   treeview_triggers="y"
+   treeview_aliases="y"
+   treeview_timers="y"
+   underline_hyperlinks="y"
+   unpause_on_send="y"
+   use_custom_link_colour="y"
+   use_mxp="3"
+   validate_incoming_chat_calls="y"
+   warn_if_scripting_inactive="y"
+   wrap_column="100"
+   write_world_name_to_log="y"
+   > <!-- end of general world attributes -->
+
+</world>
+
+<!-- triggers -->
+
+<triggers
+   muclient_version="5.07-pre"
+   world_file_version="15"
+  >
+  <trigger
+   enabled="y"
+   match="     * sparkling, pristine crystal figurine resembling a fat hen is lying here."
+   sequence="100"
+  >
+  <send>get crystal</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="     A tiny, ornate figurine resembling a fat hen is lying here."
+   sequence="100"
+  >
+  <send>get chicken</send>
+  </trigger>
+  <trigger
+   group="obstacle"
+   match="  A humanoid statue stands within the middle of this hallway, feet away"
+   send_to="12"
+   sequence="100"
+  >
+  <send>DoAfter(4.3, "hfive statue")</send>
+  </trigger>
+  <trigger
+   group="obstacle"
+   match="  A long white tube is stuck within a rock wall up ahead, narrow but"
+   send_to="12"
+   sequence="100"
+  >
+  <send>DoAfter(3.9, "crawl tube")</send>
+  </trigger>
+  <trigger
+   group="obstacle"
+   match="  A pit of coarse sand greets you at the base of this unyielding stone"
+   send_to="12"
+   sequence="100"
+  >
+  <send>DoAfter(3.8, "hold shovel")
+DoAfter(4.5, "dig sand")</send>
+  </trigger>
+  <trigger
+   group="obstacle"
+   match="  A tall rock tower looms in front of you, fitted with studded handholds"
+   send_to="12"
+   sequence="100"
+  >
+  <send>DoAfter(4.2, "climb rock")</send>
+  </trigger>
+  <trigger
+   group="holiday"
+   match="  Shinjirarenai Hodo no Kiku, nearby to the *."
+   sequence="100"
+  >
+  <send>%1</send>
+  </trigger>
+  <trigger
+   group="obstacle"
+   match="  This appears to be a dead end; there is nothing ahead except for a"
+   send_to="12"
+   sequence="100"
+  >
+  <send>DoAfter(3.5, "hold hook")
+DoAfter(4, "use hook")</send>
+  </trigger>
+  <trigger
+   group="obstacle"
+   match="  This room is very empty except for a lone lightbulb that casts a conical"
+   send_to="12"
+   sequence="100"
+  >
+  <send>DoAfter(3.8, "squeeze bubble")</send>
+  </trigger>
+  <trigger
+   group="holiday"
+   match="  the snowman target, nearby to the *."
+   sequence="100"
+  >
+  <send>%1</send>
+  </trigger>
+  <trigger
+   group="snowman"
+   match="  the snowman target, right here."
+   sequence="100"
+  >
+  <send>y</send>
+  </trigger>
+  <trigger
+   group="playerhouses"
+   match=" | * - *|"
+   name="playerhouses"
+   omit_from_output="y"
+   send_to="14"
+   sequence="100"
+  >
+  <send>Tell "%0"
+Hyperlink ("knock %1", "Knock at %2", "Knock on door", "white", "black", 0)</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="( *) A tiny, ornate figurine resembling a fat hen is lying here."
+   sequence="100"
+  >
+  <send>get chicken
+get chicken
+get chicken</send>
+  </trigger>
+  <trigger
+   match="(Please see * for the next page.)"
+   sequence="100"
+  >
+  <send>l %1</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="(Relic) the Sages' Staff's icy aura dies down."
+   sequence="100"
+  >
+  <send>wear core
+use core sages
+wear materia</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="(Spooky) A baby jack o' lantern is giggling and skittering around here."
+   sequence="100"
+  >
+  <send>talk lant</send>
+  </trigger>
+  <trigger
+   match="* * you. *parry*"
+   sequence="100"
+  >
+  <send>riposte</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="* DISARMS you and sends your weapon flying!"
+   send_to="10"
+   sequence="100"
+  >
+  <send>getweapon</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="* gleaming golden figurine resembling a fat hen is lying here."
+   sequence="100"
+  >
+  <send>get chicken
+get chicken
+get chicken
+get chicken</send>
+  </trigger>
+  <trigger
+   match="* has * you. *parry*"
+   sequence="100"
+  >
+  <send>riposte</send>
+  </trigger>
+  <trigger
+   match="* has * you. *parry* *parry*"
+   sequence="100"
+  >
+  <send>riposte</send>
+  </trigger>
+  <trigger
+   match="* is DEAD!"
+   sequence="100"
+  >
+  <send>33
+harvest spellcomps corpse
+donate cutfromcorpse
+donate cupfromcorpse
+donate cutfromcorpse</send>
+  </trigger>
+  <trigger
+   match="* is looking less frazzled."
+   send_to="12"
+   sequence="100"
+  >
+  <send>EnableTriggerGroup("overpower", false)
+Execute("trip")</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="* is mortally wounded, and will die soon if not aided."
+   sequence="100"
+  >
+  <send>c soul</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="* is pinned down by your grapple and cannot move!"
+   sequence="100"
+  >
+  <send>pile
+handspring</send>
+  </trigger>
+  <trigger
+   group="pettracker"
+   match="* is starting to look restless."
+   send_to="10"
+   sequence="100"
+  >
+  <send>tracker {R16 SECONDS UNTIL YOU LOSE CONTROL OF {Y%1</send>
+  </trigger>
+  <trigger
+   group="shadowblade"
+   match="* jumps to the aid of *!"
+   sequence="100"
+  >
+  <send>assist</send>
+  </trigger>
+  <trigger
+   group="pettracker"
+   match="* now follows you."
+   send_to="10"
+   sequence="100"
+  >
+  <send>tracker {D[{R%1{D] has been {YT{yA{WM{YE{yD{W!</send>
+  </trigger>
+  <trigger
+   match="* opens the wooden door."
+   sequence="100"
+  >
+  <send>close door</send>
+  </trigger>
+  <trigger
+   group="shadowblade"
+   match="* rushes forward to protect *!"
+   sequence="100"
+  >
+  <send>assist</send>
+  </trigger>
+  <trigger
+   match="* sends you sprawling with a powerful bash* (*)"
+   sequence="100"
+  >
+  <send>stand</send>
+  </trigger>
+  <trigger
+   group="pettracker"
+   match="* stops following you."
+   send_to="10"
+   sequence="100"
+  >
+  <send>tracker {Y%1 {RSTOPPED FOLLOWING!</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="* trips a hidden switch, making the ground under you open up."
+   sequence="100"
+  >
+  <send>push indent
+w
+tickle broom
+say help
+e
+push indent
+e
+u
+se
+w
+sw</send>
+  </trigger>
+  <trigger
+   group="align"
+   match="*TICK*"
+   sequence="100"
+  >
+  <send>scan</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="*ou trip * and * goes down* (*)"
+   send_to="12"
+   sequence="100"
+  >
+  <send>EnableTriggerGroup("overpower", true)
+Execute("over")</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="*our trip misses *."
+   sequence="100"
+  >
+  <send>trip</send>
+  </trigger>
+  <trigger
+   group="smash"
+   match="A Pichu happily frolicks around the stadium."
+   sequence="100"
+  >
+  <send>kill pichu
+c fira</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="A Yoshi Doll drops onto one end of the conveyor belt."
+   send_to="12"
+   sequence="100"
+  >
+  <send>DoAfter(0.3, "push button")</send>
+  </trigger>
+  <trigger
+   match="A big iron pot falls in from above, making a small crater."
+   send_to="12"
+   sequence="100"
+  >
+  <send>DoAfter(11.8, "c black")</send>
+  </trigger>
+  <trigger
+   group="holiday"
+   match="A cardboard snowman is sticking out of the ground here!"
+   send_to="10"
+   sequence="100"
+  >
+  <send>tracker SNOWMAN</send>
+  </trigger>
+  <trigger
+   group="holiday"
+   match="A cardboard snowman is sticking out of the ground here!"
+   sequence="100"
+  >
+  <send>hold snowball
+use snowball snowman</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="A fluffball chicken has arrived."
+   omit_from_output="y"
+   sequence="100"
+  >
+  </trigger>
+  <trigger
+   enabled="y"
+   match="A fluffball chicken leaves *."
+   omit_from_output="y"
+   sequence="100"
+  >
+  </trigger>
+  <trigger
+   custom_colour="2"
+   enabled="y"
+   expand_variables="y"
+   keep_evaluating="y"
+   match="A loud horn sounds off from the harbor, signaling the arrival of a large vessel."
+   send_to="12"
+   sequence="100"
+  >
+  <send>
+
+require "wait"
+
+require "wait"
+wait.make (function ()
+
+  for i = 779, 2, -1 do
+    SetStatus (string.format ("The S.S. Zelbess departs in %i seconds", i))
+    wait.time (1)
+  end -- for
+  
+  SetStatus (string.format ("The S.S. Zelbess is departing within the next minute!!!", i))
+  wait.time (60)
+
+  SetStatus ("Ready")
+
+end) 
+
+</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="A merchant's ship docks at the island."
+   sequence="100"
+  >
+  <send>gt The chobin ship has arrived!</send>
+  </trigger>
+  <trigger
+   group="pinata"
+   match="A merry pinata drops down from the sky from a cord, the source of the cord stretching beyond the horizon, its origins unknown."
+   sequence="100"
+  >
+  <send>use bat pinata</send>
+  </trigger>
+  <trigger
+   group="pinata"
+   match="A pinata is here, sporting a soft, blue themed color palette."
+   sequence="100"
+  >
+  <send>use bat pinata</send>
+  </trigger>
+  <trigger
+   group="holiday"
+   match="A shimmering chrysanthemum in a kimono is resting here, humming to itself."
+   sequence="100"
+  >
+  <send>give fifty shinj</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="A shimmering daisy frolicks about with gleeful abandon."
+   send_to="12"
+   sequence="100"
+  >
+  <send>Execute("tracker DAYZEE")</send>
+  </trigger>
+  <trigger
+   group="holiday"
+   match="A sparkling cardboard snowman is sticking out of the ground here!"
+   sequence="100"
+  >
+  <send>hold snowball
+use snowball snowman</send>
+  </trigger>
+  <trigger
+   group="smash"
+   match="A target floats here in midair."
+   sequence="100"
+  >
+  <send>kill target</send>
+  </trigger>
+  <trigger
+   group="enchantedtree"
+   match="An Enchanted Fruit Tree does not have any monkeys in it right now, or the cheeky buggers are hiding."
+   sequence="100"
+  >
+  <send>kill tree</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="As Theo pulls the chain turning gears are heard from above."
+   sequence="100"
+  >
+  <send>pull chain</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="As you touch the doorknob, the floor opens beneath you!"
+   sequence="100"
+  >
+  <send>push indent
+w
+tickle broom
+say help
+e
+push indent
+e
+</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="Better stand up first."
+   sequence="100"
+  >
+  <send>stand</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="Bits and chunks of things fly off of the Katamari!"
+   sequence="100"
+  >
+  <send>sacrifice debris
+kill kat</send>
+  </trigger>
+  <trigger
+   group="smash"
+   match="Captain Falcon is here, ready to race or fight!"
+   sequence="100"
+  >
+  <send>kill captain
+c fira</send>
+  </trigger>
+  <trigger
+   match="Crystallized Ozzie effortlessly diffuses your focused blast of air into small zephyrs!"
+   sequence="100"
+  >
+  <send>c air</send>
+  </trigger>
+  <trigger
+   match="Crystallized Ozzie is unaffected by your cauldron!"
+   send_to="12"
+   sequence="100"
+  >
+  <send>DoAfter(12.5, "c black cauldron")
+</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="Dark figures step from the shadows and solidify into exact replicas of you."
+   send_to="12"
+   sequence="100"
+  >
+  <send>DoAfter (80, "shadow decoy")</send>
+  </trigger>
+  <trigger
+   group="smash"
+   match="Donkey Kong stands here, beating his chest."
+   sequence="100"
+  >
+  <send>kill donkey
+c fira</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="Elisius drives the Runaway Five Tour Bus *."
+   sequence="100"
+  >
+  <send>l</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="Emouse tinkers with a silver eyedol."
+   sequence="100"
+  >
+  <send>activate eyedol</send>
+  </trigger>
+  <trigger
+   group="smash"
+   match="Falco Lombardi stands here, twirling his blaster."
+   sequence="100"
+  >
+  <send>kill falco
+c fira</send>
+  </trigger>
+  <trigger
+   match="Finally a heavy sandbag falls from above, squishing Tybalt beneath it."
+   sequence="100"
+  >
+  <send>say O, I am fortune's...</send>
+  </trigger>
+  <trigger
+   group="smash"
+   match="Fox McCloud, leader of Team Star Fox, is on the prowl here."
+   sequence="100"
+  >
+  <send>kill fox
+c fira</send>
+  </trigger>
+  <trigger
+   match="It's locked."
+   send_to="12"
+   sequence="100"
+  >
+  <send>EnableTriggerGroup("doorlock", false)</send>
+  </trigger>
+  <trigger
+   group="smash"
+   match="Kirby is here, doing the things a Kirby does."
+   sequence="100"
+  >
+  <send>kill kirby
+c fira</send>
+  </trigger>
+  <trigger
+   match="Looking around you see:"
+   send_to="12"
+   sequence="100"
+  >
+  <send>DoAfter(math.random(14)+1, "scan")</send>
+  </trigger>
+  <trigger
+   group="smash"
+   match="Luigi stands here, ready to take on all comers."
+   sequence="100"
+  >
+  <send>kill luigi
+c fira</send>
+  </trigger>
+  <trigger
+   group="smash"
+   match="Mario, plumber hero, stands firm at the top of this bracket."
+   sequence="100"
+  >
+  <send>kill mario
+c fira</send>
+  </trigger>
+  <trigger
+   group="smash"
+   match="Marth falls over, his sword clattering to the ground.  'Boku ga anata wo misokonatta...'"
+   sequence="100"
+  >
+  <send>enter door</send>
+  </trigger>
+  <trigger
+   group="smash"
+   match="Mr. Game and Watch stands here, looking rather two-dimensional."
+   sequence="100"
+  >
+  <send>kill game
+c fira</send>
+  </trigger>
+  <trigger
+   group="smash"
+   match="Nana is circling the mountain here, searching for Popo."
+   sequence="100"
+  >
+  <send>kill nana
+c fira</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="Ozma Gracious says 'I'll have to tell you the truth, my door leads into the ice field!'"
+   sequence="100"
+  >
+  <send>say I choose the green door!</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="Ozma Gracious says 'My brother and I know which door is which, I mean, I think we do!'"
+   sequence="100"
+  >
+  <send>say where does the green door go?</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="Ozma Gracious says 'Sorry, but this door will lead to your certain death.'"
+   sequence="100"
+  >
+  <send>say I choose the red door.</send>
+  </trigger>
+  <trigger
+   group="smash"
+   match="Prince Marth stands ready, guarding the Fountain from trespassers."
+   sequence="100"
+  >
+  <send>kill marth
+c fira</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="Protecting himself from the influence of the Moons, Crystallized Ozzie disperses your clones effortlessly."
+   send_to="12"
+   sequence="100"
+  >
+  <send>DoAfter(8.3, "c halo")</send>
+  </trigger>
+  <trigger
+   group="smash"
+   match="Roy, Prince of Pherae, seems slightly out of place here."
+   sequence="100"
+  >
+  <send>kill roy
+c fira</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="Sabermage throws you a world class wooden frisbee, and you catch it deftly out of the air."
+   sequence="100"
+  >
+  <send>throw frisbee sabermage</send>
+  </trigger>
+  <trigger
+   match="Slorgma makes a rather sizable withdrawal."
+   sequence="100"
+  >
+  <send>kill slorg</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="The Cane of Byrna now follows you."
+   sequence="100"
+  >
+  <send>wield clar</send>
+  </trigger>
+  <trigger
+   group="smash"
+   match="The Doctor is IN!  Dr. Mario, that is!"
+   sequence="100"
+  >
+  <send>kill mario
+c fira</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="The Goron Adventurer says 'Three! PUSH!'"
+   sequence="100"
+  >
+  <send>push apple</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="The Katamari has arrived from the *."
+   sequence="100"
+  >
+  <send>order fight kill kat</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="The Staff of Magnus's icy aura dies down."
+   sequence="100"
+  >
+  <send>use core magnus</send>
+  </trigger>
+  <trigger
+   match="The Trendy Game Owner says 'Just push the button to play. Good Luck!'"
+   sequence="100"
+  >
+  <send>push button</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="The artillery cannon becomes functional once more!"
+   sequence="100"
+  >
+  <send>activate can
+c cure generator
+c cure generator</send>
+  </trigger>
+  <trigger
+   group="enchantedtree"
+   match="The cheeky monkey drops his banana on the ground and flees!"
+   sequence="100"
+  >
+  <send>kill tree</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="The chobin captain hops off the boat and begins squeaking orders."
+   sequence="100"
+  >
+  <send>say let me off the boat.</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="The chobin captain says 'What's going on?!'"
+   send_to="10"
+   sequence="100"
+  >
+  <send>tracker {RThe {gCHOBIN{R boat is here!</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="The crane drops a healing fernet onto the floor."
+   sequence="100"
+  >
+  <send>give 50 silver game</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="The energy generator becomes functional once more!"
+   sequence="100"
+  >
+  <send>activate generator
+c cure generator
+c cure generator</send>
+  </trigger>
+  <trigger
+   group="smash"
+   match="The famous bounty hunter Samus Aran is here, charging up her lasers."
+   sequence="100"
+  >
+  <send>kill samus
+c fira</send>
+  </trigger>
+  <trigger
+   group="fishing"
+   match="The little fish were just too quick for you!  Better luck next time."
+   send_to="12"
+   sequence="100"
+  >
+  <send>DoAfter(math.random(3)+1, "fish pond")</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="The moon is out tonight."
+   sequence="100"
+  >
+  <send>gt The moon is out tonight.</send>
+  </trigger>
+  <trigger
+   group="smash"
+   match="The psychic wonder boy, Ness, stands here concentrating."
+   sequence="100"
+  >
+  <send>kill ness
+c fira</send>
+  </trigger>
+  <trigger
+   match="The sky gradually brightens as dawn sets in."
+   sequence="100"
+  >
+  <send>gt The sky gradually brightens as dawn sets in.</send>
+  </trigger>
+  <trigger
+   match="The slime sings a long, sad ballad, mourning the apparent death of his love."
+   sequence="100"
+  >
+  <send>say Thus with a kiss...</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="Thraxx's ribcage barrier opens, exposing the heart therein!"
+   sequence="100"
+  >
+  <send>target heart</send>
+  </trigger>
+  <trigger
+   match="Up on the balcony, Gooliet appears, beloved daughter of the Capulet family."
+   sequence="100"
+  >
+  <send>say But, soft! what light...</send>
+  </trigger>
+  <trigger
+   group="smash"
+   match="Yoshi stands here, looking around for something to nosh on."
+   sequence="100"
+  >
+  <send>kill yoshi
+c fira</send>
+  </trigger>
+  <trigger
+   group="doorlock"
+   match="You almost go *, but suddenly realize that the door is closed."
+   send_to="12"
+   sequence="100"
+  >
+  <send>EnableTriggerGroup("doorlock", true)
+Execute("open %1")
+Execute("%1")</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="You already have shadow decoys present."
+   send_to="12"
+   sequence="100"
+  >
+  <send>DoAfter (2, "shadow decoy")</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="You are too exhausted, better rest for a while."
+   sequence="100"
+  >
+  <send>c ref
+c ref
+c ref
+c ref
+c ref
+skin corpse</send>
+  </trigger>
+  <trigger
+   match="You are too tired to do any leathercrafting."
+   sequence="100"
+  >
+  <send>c ref
+c ref
+c ref</send>
+  </trigger>
+  <trigger
+   group="shadowblade"
+   match="You attempt to create blades out of darkness, but they dissolve back into the shadows."
+   sequence="100"
+  >
+  <send>shadow blade</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="You cast the spell to separate soul from body, and pull *'s essence into a * soulstone!"
+   sequence="100"
+  >
+  <send>put soul heart</send>
+  </trigger>
+  <trigger
+   match="You complete *!"
+   sequence="100"
+  >
+  <send>put ring vort
+get sheet
+get scale
+leathercraft create ring sheet
+leathercraft create ring scale</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="You disappear into the void."
+   sequence="100"
+  >
+  <send>l</send>
+  </trigger>
+  <trigger
+   match="You dismiss the minighost. Bye bye!"
+   sequence="100"
+  >
+  <send>c summon minighost</send>
+  </trigger>
+  <trigger
+   group="shadowblade"
+   match="You do not seem to have that item."
+   sequence="100"
+  >
+  <send>shadow blade
+throw shadowblade</send>
+  </trigger>
+  <trigger
+   match="You draw *. Your total is * across * cards."
+   send_to="12"
+   sequence="100"
+  >
+  <send>if %2 &gt;16 then 
+Execute("bj stand")
+elseif %2 &gt;= 22 then
+Execute("bj start")
+else
+Execute("bj hit")
+end</send>
+  </trigger>
+  <trigger
+   match="You draw a minighost into reality."
+   sequence="100"
+  >
+  <send>dismiss minighost</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   group="vehicle"
+   match="You drop a Flammie Jetbike."
+   sequence="100"
+  >
+  <send>sit jetbike
+</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   group="vehiclebus"
+   match="You drop the Runaway Five Tour Bus."
+   sequence="100"
+  >
+  <send>sit bus</send>
+  </trigger>
+  <trigger
+   group="smash"
+   match="You enter the Exit."
+   sequence="100"
+  >
+  <send>n
+buy ticket
+s
+give ticket operator</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="You examine *, but can't figure out where to start cutting."
+   sequence="100"
+  >
+  <send>!</send>
+  </trigger>
+  <trigger
+   group="align"
+   match="You follow Steven *."
+   sequence="100"
+  >
+  <send>align</send>
+  </trigger>
+  <trigger
+   group="align"
+   match="You follow a fluffball chicken *."
+   sequence="100"
+  >
+  <send>align</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="You gather up some shadows but they flow from your grasp."
+   sequence="100"
+  >
+  <send>shadow decoy</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   group="vehicle"
+   match="You get a Flammie Jetbike."
+   send_to="12"
+   sequence="100"
+  >
+  <send>EnableTrigger("getbike, false")</send>
+  </trigger>
+  <trigger
+   match="You get a healing fernet."
+   sequence="100"
+  >
+  <send>give 50 silver game</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="You get a small glass chicken."
+   send_to="12"
+   sequence="100"
+  >
+  <send>ColourNote("red", "", "Chicken Obtained!")</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   group="vehiclebus"
+   match="You get the Runaway Five Tour Bus."
+   send_to="12"
+   sequence="100"
+  >
+  <send>EnableTrigger("getbus, false")</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="You grapple with *, but * breaks free."
+   sequence="100"
+  >
+  <send>grapple</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   group="assistblade"
+   match="You jump to assist *!"
+   send_to="12"
+   sequence="100"
+  >
+  <send>Execute ("throw shadowblade")
+EnableTriggerGroup("assistblade", false)
+DoAfterSpecial (3, 'EnableTriggerGroup ("assistblade", 1)', sendto.script)
+</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="You launch yourself off the ground and deliver a spinning kick to * head!!! (*)"
+   sequence="100"
+  >
+  <send>over</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="You launch yourself off the ground but are too off-balance to strike *."
+   sequence="100"
+  >
+  <send>over</send>
+  </trigger>
+  <trigger
+   match="You lose your concentration."
+   sequence="100"
+  >
+  <send>c air</send>
+  </trigger>
+  <trigger
+   group="overpower"
+   match="You mercilessly beat * down* (*)"
+   sequence="100"
+  >
+  <send>overpower</send>
+  </trigger>
+  <trigger
+   match="You receive 0 experience points."
+   sequence="100"
+  >
+  <send>order rydia kill gato</send>
+  </trigger>
+  <trigger
+   match="You sit down."
+   sequence="100"
+  >
+  <send>stand</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   group="vehiclebus"
+   match="You sit in the Runaway Five Tour Bus."
+   send_to="12"
+   sequence="100"
+  >
+  <send>EnableTrigger("getbus", true)</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   group="vehicle"
+   match="You sit on a Flammie Jetbike."
+   send_to="12"
+   sequence="100"
+  >
+  <send>EnableTrigger("getbike", true)</send>
+  </trigger>
+  <trigger
+   group="doorlock"
+   match="You slam face-first into the door on your way *.  WHAM!"
+   sequence="100"
+  >
+  <send>open %1
+%1</send>
+  </trigger>
+  <trigger
+   group="fishing"
+   match="You sling your net expertly through the water, and manage to secure..."
+   send_to="12"
+   sequence="100"
+  >
+  <send>DoAfter(math.random(3)+1, "fish pond")</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="You slowly float back to the ground as your fly spell wears off."
+   sequence="100"
+  >
+  <send>fly</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   group="vehiclebus"
+   match="You stand up."
+   name="getbus"
+   send_to="12"
+   sequence="100"
+  >
+  <send>Execute("get bus")
+EnableTrigger("getbus, false")</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   group="vehicle"
+   match="You stand up."
+   name="getbike"
+   send_to="12"
+   sequence="100"
+  >
+  <send>Execute("get jetbike")</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="You start holding your breath."
+   sequence="100"
+  >
+  <send>get gorka heart;quaff gorka</send>
+  </trigger>
+  <trigger
+   match="You think to say, &quot;*&quot;"
+   omit_from_output="y"
+   send_to="14"
+   sequence="100"
+  >
+  <send>Hyperlink ("say %1", "You think to say '%1'", "Respond to chat", "red", "black", 0)</send>
+  </trigger>
+  <trigger
+   match="You think, &quot;*&quot;"
+   omit_from_output="y"
+   sequence="100"
+  >
+  </trigger>
+  <trigger
+   enabled="y"
+   match="You think, &quot;It is time to make... THE MAGICS!&quot;"
+   sequence="100"
+  >
+  <send>say It is time to make... THE MAGICS!</send>
+  </trigger>
+  <trigger
+   group="shadowblade"
+   match="You throw a crescent-shaped shadow at *!"
+   sequence="100"
+  >
+  <send>throw shadowblade</send>
+  </trigger>
+  <trigger
+   group="shadowblade"
+   match="You throw a crescent-shaped shadow at *, but miss."
+   sequence="100"
+  >
+  <send>throw shadowblade</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="You try to overpower *, but can't find an opening. (*)"
+   sequence="100"
+  >
+  <send>trip</send>
+  </trigger>
+  <trigger
+   group="overpower"
+   match="You try to overpower *, but can't find an opening. (*)"
+   sequence="100"
+  >
+  <send>trip</send>
+  </trigger>
+  <trigger
+   group="overpower"
+   match="You try to overpower your foe, but miss entirely."
+   sequence="100"
+  >
+  <send>over</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="You're carrying too many items to get a healing fernet."
+   sequence="100"
+  >
+  <send>give 50 silver game</send>
+  </trigger>
+  <trigger
+   group="smash"
+   match="Young Link is here, idly sipping milk while staring out at the sea."
+   sequence="100"
+  >
+  <send>kill link
+c fira</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="Your efforts with a Misty Core produce only smoke and sparks."
+   sequence="100"
+  >
+  <send>use core bloodstaff</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="Your wounds accumulate, and your rage starts to build!"
+   sequence="100"
+  >
+  <send>brage</send>
+  </trigger>
+  <trigger
+   match="[*  * * ] * * *"
+   send_to="14"
+   sequence="100"
+  >
+  <send>Hyperlink ("info %6", "[ %1 %2 %3] %4 %5 %6", "Active chat sessions", "yellow", "black", 0)</send>
+  </trigger>
+  <trigger
+   group="obstacle"
+   match="however, and you are not inclined to slip easily unless you really put some"
+   send_to="12"
+   sequence="100"
+  >
+  <send>DoAfter(4.2, "longjump crev")</send>
+  </trigger>
+  <trigger
+   group="obstacle"
+   match="of the pit; a length of rope is attached to its peak, draped out across the"
+   send_to="12"
+   sequence="100"
+  >
+  <send>DoAfter(3.9, "pull rope")</send>
+  </trigger>
+  <trigger
+   group="obstacle"
+   match="thin rock pillar, looking somewhat wobbly as it towers over the side of the"
+   send_to="12"
+   sequence="100"
+  >
+  <send>DoAfter(3.5, "push pillar")</send>
+  </trigger>
+  <trigger
+   match="| HP:*/* | MP:*/* | MV:*/* | Enemy:* | TNL:* | SUPER: * | "
+   omit_from_output="y"
+   sequence="100"
+  >
+  </trigger>
+  <trigger
+   group="AutoAttack"
+   match="| HP:*/* | MP:*/* | MV:*/* | Enemy:*% | TNL:* | SUPER: * | "
+   name="AutoAttack"
+   sequence="100"
+  >
+  <send>c drain</send>
+  </trigger>
+</triggers>
+
+<!-- aliases -->
+
+<aliases
+   muclient_version="5.07-pre"
+   world_file_version="15"
+  >
+  <alias
+   match="1"
+   sequence="100"
+  >
+  <send>c fira</send>
+  </alias>
+  <alias
+   match="1 *"
+   enabled="y"
+   sequence="100"
+  >
+  <send>c fira %1</send>
+  </alias>
+  <alias
+   match="2"
+   sequence="100"
+  >
+  <send>c drain</send>
+  </alias>
+  <alias
+   match="2 *"
+   enabled="y"
+   sequence="100"
+  >
+  <send>c drain %1</send>
+  </alias>
+  <alias
+   name="ToggleTrigger"
+   match="aa"
+   enabled="y"
+   send_to="12"
+   ignore_case="y"
+   sequence="100"
+  >
+  <send>EnableTrigger ("AutoAttack", (GetTriggerOption("AutoAttack", "enabled")+1)%%2)
+ColourNote ("sienna", "thistle", "AutoAttack trigger is enabled: " .. tostring(GetTriggerOption("AutoAttack", "enabled") == 1))
+</send>
+  </alias>
+  <alias
+   match="align off"
+   enabled="y"
+   send_to="12"
+   sequence="100"
+  >
+  <send>EnableTriggerGroup("align", false)
+ColourNote("red", "", "Align Mode OFF.")</send>
+  </alias>
+  <alias
+   match="align on"
+   enabled="y"
+   send_to="12"
+   sequence="100"
+  >
+  <send>EnableTriggerGroup("align", true)
+ColourNote("lime", "", "Align Mode ON.")</send>
+  </alias>
+  <alias
+   match="barrier"
+   enabled="y"
+   sequence="100"
+  >
+  <send>say barrier me</send>
+  </alias>
+  <alias
+   match="bs"
+   enabled="y"
+   sequence="100"
+  >
+  <send>say barrier self</send>
+  </alias>
+  <alias
+   match="burn"
+   enabled="y"
+   sequence="100"
+  >
+  <send>say Burn to Ashes</send>
+  </alias>
+  <alias
+   match="c cure"
+   enabled="y"
+   sequence="100"
+  >
+  <send>c cur</send>
+  </alias>
+  <alias
+   match="call"
+   enabled="y"
+   send_to="10"
+   sequence="100"
+  >
+  <send>#call 68.3.211.40 4051</send>
+  </alias>
+  <alias
+   match="charge"
+   enabled="y"
+   sequence="100"
+  >
+  <send>remove hull
+c charge
+wear hull</send>
+  </alias>
+  <alias
+   match="craft * *"
+   enabled="y"
+   sequence="100"
+  >
+  <send>get %2 vortex
+leathercraft create %1 %2</send>
+  </alias>
+  <alias
+   match="ct *"
+   enabled="y"
+   sequence="100"
+  >
+  <send>clan {D[{RH{ru{Rm{ra{Rn {r{YM{ya{Wn{Ya{yg{We{Ym{ye{Wn{Yt{D] %1</send>
+  </alias>
+  <alias
+   match="ct *"
+   sequence="100"
+  >
+  <send>clan %1</send>
+  </alias>
+  <alias
+   match="cure"
+   enabled="y"
+   sequence="100"
+  >
+  <send>wear greaves
+c cur
+wear hull</send>
+  </alias>
+  <alias
+   match="debug"
+   enabled="y"
+   sequence="100"
+  >
+  <send>push button
+push button
+push button
+push button
+push button
+c din</send>
+  </alias>
+  <alias
+   match="esuna"
+   enabled="y"
+   sequence="100"
+  >
+  <send>say esuna me</send>
+  </alias>
+  <alias
+   match="fr *"
+   enabled="y"
+   sequence="100"
+  >
+  <send>get fire unne
+wear fire
+use fire %1
+put fire lazy
+wear shield</send>
+  </alias>
+  <alias
+   match="frostyforest"
+   enabled="y"
+   sequence="100"
+  >
+  <send>drop bus
+sit bus
+n
+n
+n
+n
+n
+n
+e
+n
+n
+n
+n
+n
+d
+w
+sw
+nw
+ne
+ne
+ne
+nw
+u
+w
+u
+n
+w
+n
+n
+ne
+n
+u
+ne
+u
+nw
+u
+ne
+e
+u
+ne
+e
+e
+e
+ne
+se
+ne
+u
+ne
+u
+ne
+n
+n
+nw
+nw
+n
+d
+ne
+d
+d
+ne
+d
+ne
+stand
+get bus</send>
+  </alias>
+  <alias
+   match="getweapon"
+   enabled="y"
+   sequence="100"
+  >
+  <send>get truth
+wield truth</send>
+  </alias>
+  <alias
+   match="haste"
+   enabled="y"
+   sequence="100"
+  >
+  <send>say haste me</send>
+  </alias>
+  <alias
+   match="heal"
+   enabled="y"
+   sequence="100"
+  >
+  <send>say mend me</send>
+  </alias>
+  <alias
+   match="holiday off"
+   enabled="y"
+   send_to="12"
+   sequence="100"
+  >
+  <send>EnableTriggerGroup("holiday", false)
+ColourNote("red", "", "Holiday Mode OFF.")</send>
+  </alias>
+  <alias
+   match="holiday on"
+   enabled="y"
+   send_to="12"
+   sequence="100"
+  >
+  <send>EnableTriggerGroup("holiday", true)
+ColourNote("lime", "", "Holiday Mode ON.")</send>
+  </alias>
+  <alias
+   match="home"
+   enabled="y"
+   send_to="12"
+   sequence="100"
+  >
+  <send>Execute("mapper goto 187BDEEC06515AB740762AEEB")</send>
+  </alias>
+  <alias
+   match="hs"
+   enabled="y"
+   sequence="100"
+  >
+  <send>say haste self</send>
+  </alias>
+  <alias
+   match="ir *"
+   enabled="y"
+   sequence="100"
+  >
+  <send>get ice unne
+wear ice
+use ice %1
+wear shield
+put ice lazy</send>
+  </alias>
+  <alias
+   match="k *"
+   enabled="y"
+   sequence="100"
+  >
+  <send>order all kill %1
+kill %1</send>
+  </alias>
+  <alias
+   match="look sign"
+   enabled="y"
+   send_to="12"
+   sequence="100"
+  >
+  <send>EnableTriggerGroup("playerhouses", true)
+Execute("look sig")
+DoAfterSpecial (1, 'EnableTriggerGroup ("playerhouses", false)', sendto.script)</send>
+  </alias>
+  <alias
+   match="nursetime"
+   enabled="y"
+   sequence="100"
+  >
+  <send>say Semper boni Nunquam nocere</send>
+  </alias>
+  <alias
+   match="obstacle off"
+   enabled="y"
+   send_to="12"
+   sequence="100"
+  >
+  <send>EnableTriggerGroup("obstacle", false)
+ColourNote("red", "", "Obstacle Course Mode OFF.")</send>
+  </alias>
+  <alias
+   match="obstacle on"
+   enabled="y"
+   send_to="12"
+   sequence="100"
+  >
+  <send>EnableTriggerGroup("obstacle", true)
+ColourNote("lime", "", "Obstacle Course Mode ON.")</send>
+  </alias>
+  <alias
+   match="ooc *"
+   enabled="y"
+   sequence="100"
+  >
+  <send>oo {D%1</send>
+  </alias>
+  <alias
+   match="pip"
+   enabled="y"
+   send_to="12"
+   sequence="100"
+  >
+  <send>Execute("mapper goto 1D9F3DD154D004CCE64F62224")</send>
+  </alias>
+  <alias
+   match="prompttime"
+   enabled="y"
+   sequence="100"
+  >
+  <send>prompt {r[{DHP:{G%p%h{D/{g%H {DMP:{A%m{D/{a%M {DTNL:{V%X{D/{v%E {DGil:{Y%s{r][{REnemy:%f{r]{W%L {G%w %W{w%c</send>
+  </alias>
+  <alias
+   match="r"
+   enabled="y"
+   sequence="100"
+  >
+  <send>dance does the cha-cha-cha.</send>
+  </alias>
+  <alias
+   match="r"
+   sequence="100"
+  >
+  <send>buy hoop
+hold hoop
+use hoop</send>
+  </alias>
+  <alias
+   match="recall"
+   enabled="y"
+   sequence="100"
+  >
+  <send>stand
+get jetbike
+recite recall
+look</send>
+  </alias>
+  <alias
+   match="res"
+   enabled="y"
+   sequence="100"
+  >
+  <send>order fight rescue asmodeus</send>
+  </alias>
+  <alias
+   match="return"
+   enabled="y"
+   sequence="100"
+  >
+  <send>say Return to Flesh</send>
+  </alias>
+  <alias
+   match="safecombo"
+   enabled="y"
+   sequence="100"
+  >
+  <send>turn first
+turn first
+turn first
+turn first
+turn first
+turn first
+turn first
+turn second
+turn second
+turn second
+turn second
+turn second
+turn second
+turn second
+turn second
+turn second
+turn third
+turn third
+turn third
+turn third
+turn fourth
+turn fourth
+turn fourth
+turn fourth
+turn fourth
+turn fourth
+turn fourth
+turn fifth
+turn fifth
+turn fifth
+turn fifth
+turn fifth
+turn fifth
+turn fifth
+turn fifth</send>
+  </alias>
+  <alias
+   match="sanc"
+   enabled="y"
+   sequence="100"
+  >
+  <send>say nayru me</send>
+  </alias>
+  <alias
+   match="say *"
+   sequence="100"
+  >
+  <send>osay %1</send>
+  </alias>
+  <alias
+   match="shadowblade off"
+   enabled="y"
+   send_to="12"
+   sequence="100"
+  >
+  <send>EnableTriggerGroup("shadowblade", false)
+ColourNote("red", "", "Shadow Blades OFF.")</send>
+  </alias>
+  <alias
+   match="shadowblade on"
+   enabled="y"
+   send_to="12"
+   sequence="100"
+  >
+  <send>EnableTriggerGroup("shadowblade", true)
+ColourNote("lime", "", "Shadow Blades ON.")</send>
+  </alias>
+  <alias
+   match="slimetown"
+   enabled="y"
+   sequence="100"
+  >
+  <send>ne
+e
+n
+n
+n
+n
+n
+w
+w
+n
+n
+n
+ne
+nw
+n
+ne
+n
+ne
+n
+ne
+e
+e
+nw
+ne
+nw
+n
+ne
+n
+nw
+w
+w
+n
+</send>
+  </alias>
+  <alias
+   match="smash off"
+   enabled="y"
+   send_to="12"
+   sequence="100"
+  >
+  <send>EnableTriggerGroup("smash", false)
+ColourNote("red", "", "Smash Mode OFF.")</send>
+  </alias>
+  <alias
+   match="smash on"
+   enabled="y"
+   send_to="12"
+   sequence="100"
+  >
+  <send>EnableTriggerGroup("smash", true)
+ColourNote("lime", "", "Smash Mode ON.")</send>
+  </alias>
+  <alias
+   match="snow *"
+   send_to="12"
+   sequence="100"
+  >
+  <send>Execute("use snow %1")
+DoAfterSpecial (math.random (185, 240), 'Execute("snow %1")', sendto.script)</send>
+  </alias>
+  <alias
+   match="spark"
+   enabled="y"
+   sequence="100"
+  >
+  <send>say Spark of Azuth!</send>
+  </alias>
+  <alias
+   match="ss"
+   enabled="y"
+   sequence="100"
+  >
+  <send>say Syphon Soul!</send>
+  </alias>
+  <alias
+   match="t"
+   enabled="y"
+   sequence="100"
+  >
+  <send>say heal self</send>
+  </alias>
+  <alias
+   match="t"
+   enabled="y"
+   sequence="100"
+  >
+  <send>buy dart
+hold dart
+use dart</send>
+  </alias>
+  <alias
+   match="tap"
+   enabled="y"
+   sequence="100"
+  >
+  <send>wield byrna
+c earthtap</send>
+  </alias>
+  <alias
+   match="tr *"
+   enabled="y"
+   sequence="100"
+  >
+  <send>get thunder unne
+wear thunder
+use thunder %1
+put thunder lazy
+wear shield</send>
+  </alias>
+  <alias
+   match="tracker *"
+   send_to="12"
+   sequence="100"
+  >
+  <send>Simulate("\\n{D[{RT{rr{Ra{rc{Rk{re{Rr{D]: %1\\n")</send>
+  </alias>
+  <alias
+   match="vitamin"
+   enabled="y"
+   sequence="100"
+  >
+  <send>give ten attendant
+give ten attendant
+give ten attendant
+give ten attendant
+give ten attendant
+say mario multivitamin</send>
+  </alias>
+  <alias
+   match="whotail"
+   enabled="y"
+   sequence="100"
+  >
+  <send>say the forgotten one of the ship that sails the cosmos</send>
+  </alias>
+  <alias
+   match="wutaitime"
+   enabled="y"
+   sequence="100"
+  >
+  <send>drop bus
+sit bus
+n
+n
+n
+n
+n
+n
+e
+n
+n
+n
+e
+e
+e
+s
+w
+s
+e
+se
+se
+se
+e
+e
+n
+stand
+get bus
+n
+</send>
+  </alias>
+  <alias
+   match="y *"
+   sequence="100"
+  >
+  <send>hold snowball
+use snowball %1</send>
+  </alias>
+  <alias
+   match="yes"
+   enabled="y"
+   sequence="100"
+  >
+  <send>tell abaril go
+pull orb</send>
+  </alias>
+</aliases>
+
+<!-- timers -->
+
+<timers
+   muclient_version="5.07-pre"
+   world_file_version="15"
+  >
+</timers>
+
+<!-- macros -->
+
+<macros
+   muclient_version="5.07-pre"
+   world_file_version="15"
+  >
+
+  <macro name="up" type="send_now" >
+  <send>up</send>
+
+  </macro>
+
+  <macro name="down" type="send_now" >
+  <send>down</send>
+
+  </macro>
+
+  <macro name="north" type="send_now" >
+  <send>north</send>
+
+  </macro>
+
+  <macro name="south" type="send_now" >
+  <send>south</send>
+
+  </macro>
+
+  <macro name="east" type="send_now" >
+  <send>east</send>
+
+  </macro>
+
+  <macro name="west" type="send_now" >
+  <send>west</send>
+
+  </macro>
+
+  <macro name="examine" type="replace" >
+  <send>examine </send>
+
+  </macro>
+
+  <macro name="look" type="replace" >
+  <send>look </send>
+
+  </macro>
+
+  <macro name="page" type="replace" >
+  <send>page </send>
+
+  </macro>
+
+  <macro name="say" type="replace" >
+  <send>say </send>
+
+  </macro>
+
+  <macro name="whisper" type="replace" >
+  <send>whisper </send>
+
+  </macro>
+
+  <macro name="doing" type="send_now" >
+  <send>DOING</send>
+
+  </macro>
+
+  <macro name="who" type="send_now" >
+  <send>WHO</send>
+
+  </macro>
+
+  <macro name="drop" type="replace" >
+  <send>drop </send>
+
+  </macro>
+
+  <macro name="take" type="replace" >
+  <send>take </send>
+
+  </macro>
+
+  <macro name="logout" type="send_now" >
+  <send>LOGOUT</send>
+
+  </macro>
+
+  <macro name="quit" type="send_now" >
+  <send>QUIT</send>
+
+  </macro>
+</macros>
+
+<!-- variables -->
+
+<variables
+   muclient_version="5.07-pre"
+   world_file_version="15"
+  >
+  <variable name="id">ca8c1c6da74dd3b245afe4e7</variable>
+</variables>
+
+<!-- colours -->
+
+<colours
+   muclient_version="5.07-pre"
+   world_file_version="15"
+  >
+
+<ansi>
+
+ <normal>
+   <colour seq="1" rgb="black" />
+   <colour seq="2" rgb="maroon" />
+   <colour seq="3" rgb="green" />
+   <colour seq="4" rgb="olive" />
+   <colour seq="5" rgb="navy" />
+   <colour seq="6" rgb="purple" />
+   <colour seq="7" rgb="teal" />
+   <colour seq="8" rgb="silver" />
+
+ </normal>
+
+ <bold>
+   <colour seq="1" rgb="#3E3E3E" />
+   <colour seq="2" rgb="red" />
+   <colour seq="3" rgb="lime" />
+   <colour seq="4" rgb="yellow" />
+   <colour seq="5" rgb="blue" />
+   <colour seq="6" rgb="fuchsia" />
+   <colour seq="7" rgb="aqua" />
+   <colour seq="8" rgb="white" />
+
+ </bold>
+
+</ansi>
+
+<custom>
+  <colour seq="1" name="Custom1" text="#FF8080" back="black" />
+  <colour seq="2" name="Custom2" text="#FFFF80" back="black" />
+  <colour seq="3" name="Custom3" text="#80FF80" back="black" />
+  <colour seq="4" name="Custom4" text="#80FFFF" back="black" />
+  <colour seq="5" name="Custom5" text="#0080FF" back="black" />
+  <colour seq="6" name="Custom6" text="#FF80C0" back="black" />
+  <colour seq="7" name="Custom7" text="red" back="black" />
+  <colour seq="8" name="Custom8" text="#0080C0" back="black" />
+  <colour seq="9" name="Custom9" text="fuchsia" back="black" />
+  <colour seq="10" name="Custom10" text="#804040" back="black" />
+  <colour seq="11" name="Custom11" text="#FF8040" back="black" />
+  <colour seq="12" name="Custom12" text="teal" back="black" />
+  <colour seq="13" name="Custom13" text="#004080" back="black" />
+  <colour seq="14" name="Custom14" text="#FF0080" back="black" />
+  <colour seq="15" name="Custom15" text="green" back="black" />
+  <colour seq="16" name="Custom16" text="blue" back="black" />
+
+</custom>
+</colours>
+
+<!-- keypad -->
+
+<keypad
+   muclient_version="5.07-pre"
+   world_file_version="15"
+  >
+
+  <key name="0" >
+  <send>look</send>
+  </key>
+
+  <key name="1" >
+  <send>sw</send>
+  </key>
+
+  <key name="2" >
+  <send>south</send>
+  </key>
+
+  <key name="3" >
+  <send>se</send>
+  </key>
+
+  <key name="4" >
+  <send>west</send>
+  </key>
+
+  <key name="5" >
+  <send>WHO</send>
+  </key>
+
+  <key name="6" >
+  <send>east</send>
+  </key>
+
+  <key name="7" >
+  <send>nw</send>
+  </key>
+
+  <key name="8" >
+  <send>north</send>
+  </key>
+
+  <key name="9" >
+  <send>ne</send>
+  </key>
+
+  <key name="." >
+  <send>hide</send>
+  </key>
+
+  <key name="/" >
+  <send>inventory</send>
+  </key>
+
+  <key name="*" >
+  <send>score</send>
+  </key>
+
+  <key name="-" >
+  <send>up</send>
+  </key>
+
+  <key name="+" >
+  <send>down</send>
+  </key>
+
+  <key name="Ctrl+0" >
+  </key>
+
+  <key name="Ctrl+1" >
+  </key>
+
+  <key name="Ctrl+2" >
+  </key>
+
+  <key name="Ctrl+3" >
+  </key>
+
+  <key name="Ctrl+4" >
+  </key>
+
+  <key name="Ctrl+5" >
+  </key>
+
+  <key name="Ctrl+6" >
+  </key>
+
+  <key name="Ctrl+7" >
+  </key>
+
+  <key name="Ctrl+8" >
+  </key>
+
+  <key name="Ctrl+9" >
+  </key>
+
+  <key name="Ctrl+." >
+  </key>
+
+  <key name="Ctrl+/" >
+  </key>
+
+  <key name="Ctrl+*" >
+  </key>
+
+  <key name="Ctrl+-" >
+  </key>
+
+  <key name="Ctrl++" >
+  </key>
+</keypad>
+
+<!-- printing -->
+
+<printing
+   muclient_version="5.07-pre"
+   world_file_version="15"
+  >
+
+<ansi>
+
+ <normal>
+
+ </normal>
+
+ <bold>
+   <style seq="1" bold="y" />
+   <style seq="2" bold="y" />
+   <style seq="3" bold="y" />
+   <style seq="4" bold="y" />
+   <style seq="5" bold="y" />
+   <style seq="6" bold="y" />
+   <style seq="7" bold="y" />
+   <style seq="8" bold="y" />
+
+ </bold>
+
+</ansi>
+</printing>
+
+<!-- plugins -->
+<include name="CleftMUSH_text_substitution.xml" plugin="y" />
+<include name="CleftMUSH Chat Window.xml" plugin="y" />
+<include name="CleftMUSH Chat Echo.xml" plugin="y" />
+<include name="aard_repaint_buffer.xml" plugin="y" />
+<include name="LuaAudio.xml" plugin="y" />
+<include name="aard_miniwindow_z_order_monitor.xml" plugin="y" />
+<include name="Aardwolf_mudbin.xml" plugin="y" />
+<include name="TetrisMiniwindow.xml" plugin="y" />
+<include name="CleftMUSH_Theme_Controller.xml" plugin="y" />
+<include name="CleftMUSH_Copy_Colour_Codes.xml" plugin="y" />
+<include name="CleftMUSH_Fake_Tracker_Channel.xml" plugin="y" />
+<include name="aard_GMCP_handler.xml" plugin="y" />
+<include name="ActionBar.xml" plugin="y" />
+<include name="CleftMUSH_Plugin_Manager.xml" plugin="y" />
+<include name="CleftMUSH Communication Catcher.xml" plugin="y" />
+<include name="CleftMUSH_ConvertPacketInfo.xml" plugin="y" />
+<include name="CleftMUSH COD Handler.xml" plugin="y" />
+<include name="CleftMUSH Main Layout.xml" plugin="y" />
+<include name="CleftMUSH_Helper.xml" plugin="y" />
+<include name="CleftMUSH_New_Connection.xml" plugin="y" />
+<include name="CleftMUSH Group Monitor.xml" plugin="y" />
+<include name="timestamps.xml" plugin="y" />
+<include name="CleftMUSH_Gauges.xml" plugin="y" />
+<include name="C:\users\asmodeus\Desktop\DemonMUD-PLAY\worlds\plugins\DemonMUSH Mapper.xml" plugin="y" />
+<include name="Hyperlink_URL2.xml" plugin="y" />
+<include name="KnockKnock.xml" plugin="y" />
+<include name="help_races.xml" plugin="y" />
+</muclient>

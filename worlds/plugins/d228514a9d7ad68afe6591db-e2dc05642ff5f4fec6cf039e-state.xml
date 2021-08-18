@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE muclient>
+<!-- MuClient version 5.07-pre -->
+<!-- Written by Nick Gammon -->
+<!-- Home Page: http://www.mushclient.com/ -->
+
+<!-- Plugin state saved. Plugin: "DemonMUSH_Utility_Window". World: "Cleft of Dimensions". -->
+
+<muclient>
+
+<!-- variables -->
+
+<variables
+   muclient_version="5.07-pre"
+   world_file_version="15"
+  >
+  <variable name="WINDOW_HEIGHT">331</variable>
+  <variable name="WINDOW_WIDTH">657</variable>
+  <variable name="aard_theme_just_reloading">1</variable>
+  <variable name="fontName">Fixedsys Excelsior 3.01</variable>
+  <variable name="fontSize">12</variable>
+  <variable name="mw_e2dc05642ff5f4fec6cf039e_windowx">2152</variable>
+  <variable name="mw_e2dc05642ff5f4fec6cf039e_windowy">275</variable>
+</variables>
+</muclient>

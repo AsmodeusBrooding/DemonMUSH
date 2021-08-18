@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE muclient>
+<!-- MuClient version 5.07-pre -->
+<!-- Written by Nick Gammon -->
+<!-- Home Page: http://www.mushclient.com/ -->
+
+<!-- Plugin state saved. Plugin: "CleftMUSH_Main_Layout". World: "Cleft of Dimensions". -->
+
+<muclient>
+
+<!-- variables -->
+
+<variables
+   muclient_version="5.07-pre"
+   world_file_version="15"
+  >
+  <variable name="aard_theme_just_reloading">1</variable>
+  <variable name="all_layouts">{
+  test1 = {
+    ["      c293f9e7f04dde719f65cb90text_background"] = {
+      width = 827,
+      left = 2,
+      height = 661,
+      top = 2,
+      },
+    win_48062dcd6b934c590df53c68 = {
+      width = 830,
+      left = 0,
+      height = 114,
+      top = 665,
+      },
+    ["7c54b861a8cd3c4745c28834_mapper"] = {
+      width = 478,
+      left = 1118,
+      height = 411,
+      top = 0,
+      },
+    ["      c293f9e7f04dde719f65cb90txtresize"] = {
+      width = 16,
+      left = 813,
+      height = 16,
+      top = 647,
+      },
+    b555825a4a5700c35fa80780 = {
+      width = 766,
+      left = 830,
+      height = 385,
+      top = 410,
+      },
+    ["7c54b861a8cd3c4745c28834_z_config_win"] = {
+      width = 0,
+      left = 0,
+      height = 0,
+      top = 0,
+      },
+    ["      c293f9e7f04dde719f65cb90txtdragger"] = {
+      width = 829,
+      left = 1,
+      height = 15,
+      top = 1,
+      },
+    win_353de94ba6c42060d839e256 = {
+      width = 290,
+      left = 830,
+      height = 411,
+      top = 0,
+      },
+    demon_layout_trect = {
+      trleft = 7,
+      trbottom = 658,
+      trtop = 7,
+      trright = 824,
+      },
+    },
+  test2 = {
+    ["      c293f9e7f04dde719f65cb90text_background"] = {
+      width = 827,
+      left = 208,
+      height = 661,
+      top = 2,
+      },
+    win_48062dcd6b934c590df53c68 = {
+      width = 830,
+      left = 208,
+      height = 114,
+      top = 665,
+      },
+    ["7c54b861a8cd3c4745c28834_mapper"] = {
+      width = 207,
+      left = 0,
+      height = 381,
+      top = 0,
+      },
+    win_353de94ba6c42060d839e256 = {
+      width = 558,
+      left = 1036,
+      height = 202,
+      top = 573,
+      },
+    demon_layout_trect = {
+      trleft = 213,
+      trbottom = 658,
+      trtop = 7,
+      trright = 1030,
+      },
+    ["7c54b861a8cd3c4745c28834_z_config_win"] = {
+      width = 0,
+      left = 0,
+      height = 0,
+      top = 0,
+      },
+    ["      c293f9e7f04dde719f65cb90txtdragger"] = {
+      width = 829,
+      left = 207,
+      height = 15,
+      top = 1,
+      },
+    ["      c293f9e7f04dde719f65cb90txtresize"] = {
+      width = 16,
+      left = 1019,
+      height = 16,
+      top = 647,
+      },
+    b555825a4a5700c35fa80780 = {
+      width = 558,
+      left = 1037,
+      height = 576,
+      top = 0,
+      },
+    },
+  Asmodeus = {
+    WiLl_It_BlEnD = {
+      width = 128,
+      left = 0,
+      height = 128,
+      top = 0,
+      },
+    ["      c293f9e7f04dde719f65cb90text_background"] = {
+      width = 1779,
+      left = 2,
+      height = 1366,
+      top = 2,
+      },
+    ["588adf89370b6c3e1259ea7e"] = {
+      width = 478,
+      left = 3198,
+      height = 266,
+      top = 0,
+      },
+    ["48062dcd6b934c590df53c68"] = {
+      width = 1740,
+      left = 0,
+      height = 92,
+      top = 1858,
+      },
+    b555825a4a5700c35fa80780 = {
+      width = 1892,
+      left = 1782,
+      height = 800,
+      top = 1144,
+      },
+    win_353de94ba6c42060d839e256 = {
+      width = 1788,
+      left = 0,
+      height = 632,
+      top = 1366,
+      },
+    ["      c293f9e7f04dde719f65cb90txtdragger"] = {
+      width = 1781,
+      left = 1,
+      height = 15,
+      top = 1,
+      },
+    dd07d6dbe73fe0bd02ddb62c_z_config_win = {
+      width = 0,
+      left = 0,
+      height = 0,
+      top = 0,
+      },
+    dd07d6dbe73fe0bd02ddb62c_mapper = {
+      width = 1893,
+      left = 1782,
+      height = 1144,
+      top = 0,
+      },
+    db6e9ed958c05658b5d7d5ea = {
+      width = 0,
+      left = 0,
+      height = 0,
+      top = 0,
+      },
+    ["      c293f9e7f04dde719f65cb90txtresize"] = {
+      width = 16,
+      left = 1765,
+      height = 16,
+      top = 1352,
+      },
+    cleft_layout_trect = {
+      trleft = 7,
+      trbottom = 1363,
+      trtop = 7,
+      trright = 1776,
+      },
+    zzzzz_9f796334ab9ed476ef44f1dc = {
+      width = 1200,
+      left = 1238,
+      height = 780,
+      top = 587,
+      },
+    },
+  }</variable>
+  <variable name="lock_down_miniwindows">0</variable>
+  <variable name="trbottom">1348</variable>
+  <variable name="trleft">7</variable>
+  <variable name="trright">1778</variable>
+  <variable name="trtop">7</variable>
+</variables>
+</muclient>

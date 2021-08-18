@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+ <pluginsListing>
+  <plugin>
+    <name>CleftMUSH Mapper</name>
+    <author>Asmodeus</author>
+    <description>This is the official CleftMUSH Graphical Mapper.</description>
+    <id>dd07d6dbe73fe0bd02ddb62c</id>
+    <download>placeholder</download>
+    <installpath>1</installpath>
+  </plugin>
+
+  <plugin>
+    <name>CleftMUSH Group Monitor Window</name>
+    <author>Asmodeus and Elisius</author>
+    <id>353de94ba6c42060d839e256</id>
+    <description>Displays hp/mana/move gauges for you, your group, and your enemies.</description>
+    <download>placeholder</download>
+    <installpath>0</installpath>
+  </plugin>
+  
+    <plugin>
+    <name>CleftMUSH Big Gauges</name>
+    <author>Asmodeus</author>
+    <id>48062dcd6b934c590df53c68</id>
+    <description>Displays hp/mana/move/exp/enemy/alignment gauges. The right-click menu offers major customization functionality.</description>
+    <download>placeholder</download>
+    <installpath>0</installpath>
+  </plugin>
+
+  <plugin>
+    <name>CleftMUSH Chat Window</name>
+    <author>Asmodeus and Fiendish</author>
+    <id>55616ea13339bc68e963e1f8</id>
+    <id>b555825a4a5700c35fa80780</id>
+    <id>84164fd114202591729cb51b</id>
+    <description>Displays all communications in a window. Tabs can be added to the window, and channels assigned to new tabs.</description>
+    <download>placeholder</download>
+    <installpath>0</installpath>
+  </plugin>
+
+
+ </pluginsListing>

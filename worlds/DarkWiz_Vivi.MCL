@@ -1,0 +1,2874 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE muclient>
+<!-- MuClient version 5.06-pre -->
+<!-- Written by Nick Gammon -->
+<!-- Home Page: http://www.mushclient.com/ -->
+<muclient>
+<world
+   muclient_version="5.06-pre"
+   world_file_version="15"
+
+   auto_say_override_prefix="-"
+   auto_say_string="say "
+   chat_name="Vivi"
+   command_stack_character=";"
+   id="255439c306d0efc3bf961623"
+   input_font_name="Courier New"
+   mapping_failure="Alas, you cannot go that way."
+   name="Dark Wizardry (Vivi)"
+   new_activity_sound="(No sound)"
+   output_font_name="Fixedsys"
+   script_editor="notepad"
+   script_editor_argument="%file"
+   script_language="Lua"
+   site="dwmud.net"
+   spam_message="look"
+   speed_walk_prefix="#"
+   terminal_identification="MUSHclient-Aard"
+
+   arrows_change_history="y"
+   auto_pause="y"
+   auto_resize_minimum_lines="1"
+   auto_resize_maximum_lines="20"
+   chat_foreground_colour="red"
+   chat_background_colour="black"
+   chat_port="4050"
+   confirm_on_paste="y"
+   confirm_on_send="y"
+   convert_ga_to_newline="y"
+   default_trigger_sequence="100"
+   default_alias_sequence="100"
+   detect_pueblo="y"
+   echo_hyperlink_in_output_window="y"
+   edit_script_with_notepad="y"
+   enable_aliases="y"
+   enable_beeps="y"
+   enable_command_stack="y"
+   enable_scripts="y"
+   enable_timers="y"
+   enable_triggers="y"
+   enable_trigger_sounds="y"
+   fade_output_opacity_percent="20"
+   fade_output_seconds="8"
+   history_lines="1000"
+   hyperlink_adds_to_command_history="y"
+   hyperlink_colour="#0080FF"
+   indent_paras="y"
+   input_background_colour="white"
+   input_font_height="9"
+   input_font_weight="400"
+   input_text_colour="black"
+   keypad_enable="y"
+   line_information="y"
+   log_output="y"
+   max_output_lines="150000"
+   mud_can_change_link_colour="y"
+   mud_can_change_options="y"
+   note_text_colour="#040000"
+   omit_date_from_save_files="y"
+   output_font_height="9"
+   output_font_weight="400"
+   paste_delay_per_lines="1"
+   pixel_offset="1"
+   port="6969"
+   proxy_port="1080"
+   script_errors_to_output_window="y"
+   send_file_delay_per_lines="1"
+   send_mxp_afk_response="y"
+   show_connect_disconnect="y"
+   show_italic="y"
+   show_underline="y"
+   spam_line_count="20"
+   tab_completion_lines="200"
+   timestamp_input_text_colour="maroon"
+   timestamp_notes_text_colour="aqua"
+   timestamp_output_text_colour="white"
+   timestamp_input_back_colour="#151515"
+   timestamp_notes_back_colour="#151515"
+   timestamp_output_back_colour="#151515"
+   tool_tip_visible_time="10000"
+   tool_tip_start_time="400"
+   treeview_triggers="y"
+   treeview_aliases="y"
+   treeview_timers="y"
+   underline_hyperlinks="y"
+   unpause_on_send="y"
+   use_custom_link_colour="y"
+   use_default_input_font="y"
+   use_default_output_font="y"
+   validate_incoming_chat_calls="y"
+   warn_if_scripting_inactive="y"
+   wrap="y"
+   wrap_column="90"
+   write_world_name_to_log="y"
+   > <!-- end of general world attributes -->
+
+</world>
+
+<!-- triggers -->
+
+<triggers
+   muclient_version="5.06-pre"
+   world_file_version="15"
+  >
+  <trigger
+   back_colour="8"
+   group="clar"
+   match="* has *"
+   match_back_colour="y"
+   match_text_colour="y"
+   text_colour="13"
+  >
+  <send>clar</send>
+  </trigger>
+  <trigger
+   back_colour="8"
+   group="flurry"
+   match="* has *"
+   match_back_colour="y"
+   match_text_colour="y"
+   text_colour="13"
+  >
+  <send>flur</send>
+  </trigger>
+  <trigger
+   back_colour="8"
+   group="flurry"
+   match="* is *"
+   match_back_colour="y"
+   match_text_colour="y"
+   text_colour="13"
+  >
+  <send>flur</send>
+  </trigger>
+  <trigger
+   back_colour="8"
+   group="clar"
+   match="* is *"
+   match_back_colour="y"
+   match_text_colour="y"
+   text_colour="13"
+  >
+  <send>clar</send>
+  </trigger>
+  <trigger
+   group="sleeptrapbitch"
+   ignore_case="y"
+   match="a * sleeps."
+   send_to="12"
+  >
+  <send>Execute ("bs %1")
+EnableTriggerGroup ("sleeptrapbitch", false)</send>
+  </trigger>
+  <trigger
+   group="sleeptrapbitch"
+   ignore_case="y"
+   match="an * sleeps."
+   send_to="12"
+  >
+  <send>Execute ("bs %1")
+EnableTriggerGroup ("sleeptrapbitch", false)</send>
+  </trigger>
+  <trigger
+   group="sleeptrapbitch"
+   ignore_case="y"
+   match="the * sleeps."
+   send_to="12"
+  >
+  <send>Execute ("bs %1")
+EnableTriggerGroup ("sleeptrapbitch", false)</send>
+  </trigger>
+  <trigger
+   back_colour="8"
+   group="slash"
+   match="* has *"
+   match_back_colour="y"
+   match_text_colour="y"
+   sequence="1"
+   text_colour="13"
+  >
+  <send>slash</send>
+  </trigger>
+  <trigger
+   back_colour="8"
+   group="slash"
+   match="* is *"
+   match_back_colour="y"
+   match_text_colour="y"
+   sequence="1"
+   text_colour="13"
+  >
+  <send>slash</send>
+  </trigger>
+  <trigger
+   expand_variables="y"
+   group="drandur"
+   ignore_case="y"
+   match="*einforcements arrive to bolster Drandur's defenses."
+   name="drandur"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("wake|dr|c evil|swift|s|impale cit")
+EnableTrigger ("drandur", false)
+EnableTrigger ("a", true)</send>
+  </trigger>
+  <trigger
+   group="cowtime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="cow9"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("w|c deton cow")
+EnableTrigger ("cow9", false)
+EnableTrigger ("cow10", true)
+</send>
+  </trigger>
+  <trigger
+   expand_variables="y"
+   group="rabitetime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="rabite23"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("w|w|w|w|n|w|w|w|w|s|s|w|w|w|w|gt lay|gt lay|gt lay|gt lay|med")
+EnableTrigger ("soul4", false)
+EnableTrigger ("soul3", true)
+EnableTrigger ("rabite23", false)
+EnableTrigger ("rabitetime", true)</send>
+  </trigger>
+  <trigger
+   group="cowtime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="cow33"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("e|c deton cow")
+EnableTrigger ("cow33", false)
+EnableTrigger ("cow34", true)
+</send>
+  </trigger>
+  <trigger
+   group="cowtime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="cow32"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("e|c deton cow")
+EnableTrigger ("cow32", false)
+EnableTrigger ("cow33", true)
+</send>
+  </trigger>
+  <trigger
+   group="cowtime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="cow31"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("e|c deton cow")
+EnableTrigger ("cow31", false)
+EnableTrigger ("cow32", true)
+</send>
+  </trigger>
+  <trigger
+   group="cowtime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="cow30"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("e|c deton cow")
+EnableTrigger ("cow30", false)
+EnableTrigger ("cow31", true)
+</send>
+  </trigger>
+  <trigger
+   group="cowtime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="cow37"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("w|c deton cow")
+EnableTrigger ("cow37", false)
+EnableTrigger ("cow38", true)
+</send>
+  </trigger>
+  <trigger
+   group="cowtime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="cow36"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("w|c deton cow")
+EnableTrigger ("cow36", false)
+EnableTrigger ("cow37", true)
+</send>
+  </trigger>
+  <trigger
+   group="cowtime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="cow35"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("w|c deton cow")
+EnableTrigger ("cow35", false)
+EnableTrigger ("cow36", true)
+</send>
+  </trigger>
+  <trigger
+   group="cowtime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="cow34"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("s|c deton cow")
+EnableTrigger ("cow34", false)
+EnableTrigger ("cow35", true)
+</send>
+  </trigger>
+  <trigger
+   group="cowtime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="cow39"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("w|c deton cow")
+EnableTrigger ("cow39", false)
+EnableTrigger ("cow40", true)
+</send>
+  </trigger>
+  <trigger
+   group="cowtime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="cow38"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("w|c deton cow")
+EnableTrigger ("cow38", false)
+EnableTrigger ("cow39", true)
+</send>
+  </trigger>
+  <trigger
+   group="cowtime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="cow8"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("w|c deton cow")
+EnableTrigger ("cow8", false)
+EnableTrigger ("cow9", true)
+</send>
+  </trigger>
+  <trigger
+   group="rabitetime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="rabite22"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("e|c deton vill|c deton")
+EnableTrigger ("soul3", false)
+EnableTrigger ("soul4", true)
+EnableTrigger ("rabite22", false)
+EnableTrigger ("rabite23", true)
+</send>
+  </trigger>
+  <trigger
+   group="cowtime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="cow55"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("e|c deton cow")
+EnableTrigger ("cow55", false)
+EnableTrigger ("cow56", true)
+</send>
+  </trigger>
+  <trigger
+   group="cowtime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="cow54"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("s|c deton cow")
+EnableTrigger ("cow54", false)
+EnableTrigger ("cow55", true)
+</send>
+  </trigger>
+  <trigger
+   group="cowtime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="cow57"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("e|c deton cow")
+EnableTrigger ("cow57", false)
+EnableTrigger ("cow58", true)
+</send>
+  </trigger>
+  <trigger
+   group="cowtime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="cow56"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("e|c deton cow")
+EnableTrigger ("cow56", false)
+EnableTrigger ("cow57", true)
+</send>
+  </trigger>
+  <trigger
+   group="cowtime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="cow51"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("w|c deton cow")
+EnableTrigger ("cow51", false)
+EnableTrigger ("cow52", true)
+</send>
+  </trigger>
+  <trigger
+   group="cowtime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="cow50"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("w|c deton cow")
+EnableTrigger ("cow50", false)
+EnableTrigger ("cow51", true)
+</send>
+  </trigger>
+  <trigger
+   group="cowtime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="cow53"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("w|c deton cow")
+EnableTrigger ("cow53", false)
+EnableTrigger ("cow54", true)
+</send>
+  </trigger>
+  <trigger
+   group="cowtime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="cow52"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("w|c deton cow")
+EnableTrigger ("cow52", false)
+EnableTrigger ("cow53", true)
+</send>
+  </trigger>
+  <trigger
+   group="cowtime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="cow5"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("e|c deton cow")
+EnableTrigger ("cow5", false)
+EnableTrigger ("cow6", true)
+</send>
+  </trigger>
+  <trigger
+   group="cowtime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="cow4"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("e|c deton cow")
+EnableTrigger ("cow4", false)
+EnableTrigger ("cow5", true)
+</send>
+  </trigger>
+  <trigger
+   group="cowtime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="cow7"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("s|c deton cow")
+EnableTrigger ("cow7", false)
+EnableTrigger ("cow8", true)
+</send>
+  </trigger>
+  <trigger
+   group="cowtime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="cow6"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("e|c deton cow")
+EnableTrigger ("cow6", false)
+EnableTrigger ("cow7", true)
+</send>
+  </trigger>
+  <trigger
+   group="cowtime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="cow1"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("e|c deton cow")
+EnableTrigger ("cow1", false)
+EnableTrigger ("cow2", true)
+</send>
+  </trigger>
+  <trigger
+   group="cowtime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="cow3"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("e|c deton cow")
+EnableTrigger ("cow3", false)
+EnableTrigger ("cow4", true)
+</send>
+  </trigger>
+  <trigger
+   group="cowtime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="cow2"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("e|c deton cow")
+EnableTrigger ("cow2", false)
+EnableTrigger ("cow3", true)
+</send>
+  </trigger>
+  <trigger
+   group="cowtime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="cow49"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("w|c deton cow")
+EnableTrigger ("cow49", false)
+EnableTrigger ("cow50", true)
+</send>
+  </trigger>
+  <trigger
+   group="cowtime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="cow48"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("w|c deton cow")
+EnableTrigger ("cow48", false)
+EnableTrigger ("cow49", true)
+</send>
+  </trigger>
+  <trigger
+   group="cowtime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="cow45"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("e|c deton cow")
+EnableTrigger ("cow45", false)
+EnableTrigger ("cow46", true)
+</send>
+  </trigger>
+  <trigger
+   group="rabitetime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="rabite20"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("e|c deton vill|c deton")
+EnableTrigger ("rabite20", false)
+EnableTrigger ("rabite21", true)
+</send>
+  </trigger>
+  <trigger
+   group="cowtime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="cow59"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("e|c deton cow")
+EnableTrigger ("cow59", false)
+EnableTrigger ("cow60", true)
+</send>
+  </trigger>
+  <trigger
+   group="cowtime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="cow58"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("e|c deton cow")
+EnableTrigger ("cow58", false)
+EnableTrigger ("cow59", true)
+</send>
+  </trigger>
+  <trigger
+   group="cowtime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="cow47"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("s|c deton cow")
+EnableTrigger ("cow47", false)
+EnableTrigger ("cow48", true)
+</send>
+  </trigger>
+  <trigger
+   group="cowtime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="cow46"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("e|c deton cow")
+EnableTrigger ("cow46", false)
+EnableTrigger ("cow47", true)
+</send>
+  </trigger>
+  <trigger
+   group="cowtime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="cow41"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("s|c deton cow")
+EnableTrigger ("cow41", false)
+EnableTrigger ("cow42", true)
+</send>
+  </trigger>
+  <trigger
+   group="cowtime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="cow40"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("w|c deton cow")
+EnableTrigger ("cow40", false)
+EnableTrigger ("cow41", true)
+</send>
+  </trigger>
+  <trigger
+   group="cowtime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="cow43"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("e|c deton cow")
+EnableTrigger ("cow43", false)
+EnableTrigger ("cow44", true)
+</send>
+  </trigger>
+  <trigger
+   group="cowtime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="cow42"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("e|c deton cow")
+EnableTrigger ("cow42", false)
+EnableTrigger ("cow43", true)
+</send>
+  </trigger>
+  <trigger
+   group="cowtime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="cow29"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("e|c deton cow")
+EnableTrigger ("cow29", false)
+EnableTrigger ("cow30", true)
+</send>
+  </trigger>
+  <trigger
+   group="cowtime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="cow28"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("e|c deton cow")
+EnableTrigger ("cow28", false)
+EnableTrigger ("cow29", true)
+</send>
+  </trigger>
+  <trigger
+   group="cowtime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="cow27"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("s|c deton cow")
+EnableTrigger ("cow27", false)
+EnableTrigger ("cow28", true)
+</send>
+  </trigger>
+  <trigger
+   expand_variables="y"
+   group="drandur"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="t"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("s|s|swift|med")
+EnableTrigger ("t", false)
+EnableTrigger ("drandur", true)</send>
+  </trigger>
+  <trigger
+   group="rabitetime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="rabite21"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("e|c deton vill|c deton")
+EnableTrigger ("rabite21", false)
+EnableTrigger ("rabite22", true)
+</send>
+  </trigger>
+  <trigger
+   group="cowtime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="cow26"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("w|c deton cow")
+EnableTrigger ("cow26", false)
+EnableTrigger ("cow27", true)
+</send>
+  </trigger>
+  <trigger
+   group="cowtime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="cow25"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("w|c deton cow")
+EnableTrigger ("cow25", false)
+EnableTrigger ("cow26", true)
+</send>
+  </trigger>
+  <trigger
+   group="cowtime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="cow24"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("w|c deton cow")
+EnableTrigger ("cow24", false)
+EnableTrigger ("cow25", true)
+</send>
+  </trigger>
+  <trigger
+   group="drandur"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="s"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("e|impale cit")
+EnableTrigger ("s", false)
+EnableTrigger ("t", true)
+</send>
+  </trigger>
+  <trigger
+   group="cowtime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="cow23"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("w|c deton cow")
+EnableTrigger ("cow23", false)
+EnableTrigger ("cow24", true)
+</send>
+  </trigger>
+  <trigger
+   group="cowtime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="cow22"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("w|c deton cow")
+EnableTrigger ("cow22", false)
+EnableTrigger ("cow23", true)
+</send>
+  </trigger>
+  <trigger
+   group="cowtime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="cow21"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("w|c deton cow")
+EnableTrigger ("cow21", false)
+EnableTrigger ("cow22", true)
+</send>
+  </trigger>
+  <trigger
+   group="cowtime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="cow20"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("s|c deton cow")
+EnableTrigger ("cow20", false)
+EnableTrigger ("cow21", true)
+</send>
+  </trigger>
+  <trigger
+   expand_variables="y"
+   group="cowtime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="cow61"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("n|n|n|n|n|n|w|w|w|w|w|w|gt heal|gt heal|gt heal|gt heal|gt heal|gt heal|gt heal|drink bowl|med")
+EnableTrigger ("cow61", false)
+EnableTrigger ("cowtime", true)</send>
+  </trigger>
+  <trigger
+   group="drandur"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="r"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("s|impale cit")
+EnableTrigger ("r", false)
+EnableTrigger ("s", true)
+</send>
+  </trigger>
+  <trigger
+   group="cowtime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="cow60"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("e|c deton cow")
+EnableTrigger ("cow60", false)
+EnableTrigger ("cow61", true)
+</send>
+  </trigger>
+  <trigger
+   group="rabitetime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="rabite7"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("n|c deton rabite")
+EnableTrigger ("rabite7", false)
+EnableTrigger ("rabite8", true)
+</send>
+  </trigger>
+  <trigger
+   group="rabitetime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="rabite6"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("n|gt lay|c deton rabite")
+EnableTrigger ("rabite6", false)
+EnableTrigger ("rabite7", true)
+</send>
+  </trigger>
+  <trigger
+   group="rabitetime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="rabite5"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("n|c deton rabite")
+EnableTrigger ("rabite5", false)
+EnableTrigger ("rabite6", true)
+</send>
+  </trigger>
+  <trigger
+   group="rabitetime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="rabite4"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("e|gt lay|c 'mind sap' rabite|c deton rabite")
+EnableTrigger ("rabite4", false)
+EnableTrigger ("rabite5", true)
+</send>
+  </trigger>
+  <trigger
+   group="drandur"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="q"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("w|impale cit")
+EnableTrigger ("q", false)
+EnableTrigger ("r", true)
+</send>
+  </trigger>
+  <trigger
+   group="rabitetime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="rabite3"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("e|c deton rabite")
+EnableTrigger ("rabite3", false)
+EnableTrigger ("rabite4", true)
+</send>
+  </trigger>
+  <trigger
+   group="rabitetime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="rabite2"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("e|c deton rabite")
+EnableTrigger ("rabite2", false)
+EnableTrigger ("rabite3", true)
+</send>
+  </trigger>
+  <trigger
+   group="rabitetime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="rabite1"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("e|c deton rabite")
+EnableTrigger ("rabite1", false)
+EnableTrigger ("rabite2", true)
+</send>
+  </trigger>
+  <trigger
+   group="rabitetime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="rabite9"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("e|c deton rabite")
+EnableTrigger ("rabite9", false)
+EnableTrigger ("rabite10", true)
+</send>
+  </trigger>
+  <trigger
+   group="cowtime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="cow44"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("e|c deton cow")
+EnableTrigger ("cow44", false)
+EnableTrigger ("cow45", true)
+</send>
+  </trigger>
+  <trigger
+   group="drandur"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="p"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("w|impale cit")
+EnableTrigger ("p", false)
+EnableTrigger ("q", true)
+</send>
+  </trigger>
+  <trigger
+   group="rabitetime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="rabite8"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("e|gt lay|c deton rabite")
+EnableTrigger ("rabite8", false)
+EnableTrigger ("rabite9", true)
+</send>
+  </trigger>
+  <trigger
+   group="rabitetime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="rabite14"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("e|c deton vill|c 'mind sap'|c deton")
+EnableTrigger ("rabite14", false)
+EnableTrigger ("rabite15", true)
+</send>
+  </trigger>
+  <trigger
+   group="rabitetime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="rabite15"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("e|c deton vill|c 'mind sap'|c deton")
+EnableTrigger ("rabite15", false)
+EnableTrigger ("rabite16", true)
+</send>
+  </trigger>
+  <trigger
+   group="rabitetime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="rabite16"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("e|gt lay|c deton rabite")
+EnableTrigger ("rabite16", false)
+EnableTrigger ("rabite17", true)
+</send>
+  </trigger>
+  <trigger
+   group="rabitetime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="rabite17"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("s|gt lay|c deton vill|c deton")
+EnableTrigger ("rabite17", false)
+EnableTrigger ("rabite18", true)
+</send>
+  </trigger>
+  <trigger
+   group="drandur"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="k"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("e|impale cit")
+EnableTrigger ("k", false)
+EnableTrigger ("l", true)
+</send>
+  </trigger>
+  <trigger
+   group="drandur"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="n"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("e|impale cit")
+EnableTrigger ("n", false)
+EnableTrigger ("o", true)
+</send>
+  </trigger>
+  <trigger
+   group="drandur"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="m"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("s|w|w|n|impale cit")
+EnableTrigger ("m", false)
+EnableTrigger ("n", true)
+</send>
+  </trigger>
+  <trigger
+   group="drandur"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="l"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("n|impale cit")
+EnableTrigger ("l", false)
+EnableTrigger ("m", true)
+</send>
+  </trigger>
+  <trigger
+   group="drandur"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="o"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("n|impale cit")
+EnableTrigger ("o", false)
+EnableTrigger ("p", true)
+</send>
+  </trigger>
+  <trigger
+   group="drandur"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="j"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("s|e|e|e|impale cit")
+EnableTrigger ("j", false)
+EnableTrigger ("k", true)
+</send>
+  </trigger>
+  <trigger
+   group="drandur"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="i"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("n|impale cit")
+EnableTrigger ("i", false)
+EnableTrigger ("j", true)
+</send>
+  </trigger>
+  <trigger
+   group="drandur"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="h"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("w|impale cit")
+EnableTrigger ("h", false)
+EnableTrigger ("i", true)
+</send>
+  </trigger>
+  <trigger
+   group="drandur"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="g"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("n|n|w|impale cit")
+EnableTrigger ("g", false)
+EnableTrigger ("h", true)
+</send>
+  </trigger>
+  <trigger
+   group="drandur"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="f"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("w|impale cit")
+EnableTrigger ("f", false)
+EnableTrigger ("g", true)
+</send>
+  </trigger>
+  <trigger
+   group="cowtime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="cow19"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("e|c deton cow")
+EnableTrigger ("cow19", false)
+EnableTrigger ("cow20", true)
+</send>
+  </trigger>
+  <trigger
+   group="drandur"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="e"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("n|impale cit")
+EnableTrigger ("e", false)
+EnableTrigger ("f", true)
+</send>
+  </trigger>
+  <trigger
+   group="cowtime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="cow18"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("e|c deton cow")
+EnableTrigger ("cow18", false)
+EnableTrigger ("cow19", true)
+</send>
+  </trigger>
+  <trigger
+   group="drandur"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="d"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("e|impale cit")
+EnableTrigger ("d", false)
+EnableTrigger ("e", true)
+</send>
+  </trigger>
+  <trigger
+   group="drandur"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="c"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("e|impale cit")
+EnableTrigger ("c", false)
+EnableTrigger ("d", true)
+</send>
+  </trigger>
+  <trigger
+   group="drandur"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="b"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("s|impale cit")
+EnableTrigger ("b", false)
+EnableTrigger ("c", true)
+</send>
+  </trigger>
+  <trigger
+   group="drandur"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="a"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("w|impale cit")
+EnableTrigger ("a", false)
+EnableTrigger ("b", true)
+</send>
+  </trigger>
+  <trigger
+   group="cowtime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="cow11"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("w|c deton cow")
+EnableTrigger ("cow11", false)
+EnableTrigger ("cow12", true)
+</send>
+  </trigger>
+  <trigger
+   group="cowtime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="cow10"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("w|c deton cow")
+EnableTrigger ("cow10", false)
+EnableTrigger ("cow11", true)
+</send>
+  </trigger>
+  <trigger
+   group="cowtime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="cow13"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("w|c deton cow")
+EnableTrigger ("cow13", false)
+EnableTrigger ("cow14", true)
+</send>
+  </trigger>
+  <trigger
+   group="cowtime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="cow12"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("w|c deton cow")
+EnableTrigger ("cow12", false)
+EnableTrigger ("cow13", true)
+</send>
+  </trigger>
+  <trigger
+   group="cowtime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="cow15"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("e|c deton cow")
+EnableTrigger ("cow15", false)
+EnableTrigger ("cow16", true)
+</send>
+  </trigger>
+  <trigger
+   group="cowtime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="cow14"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("s|c deton cow")
+EnableTrigger ("cow14", false)
+EnableTrigger ("cow15", true)
+</send>
+  </trigger>
+  <trigger
+   group="cowtime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="cow17"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("e|c deton cow")
+EnableTrigger ("cow17", false)
+EnableTrigger ("cow18", true)
+</send>
+  </trigger>
+  <trigger
+   group="cowtime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="cow16"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("e|c deton cow")
+EnableTrigger ("cow16", false)
+EnableTrigger ("cow17", true)
+</send>
+  </trigger>
+  <trigger
+   group="rabitetime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="rabite19"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("s|gt lay|c deton vill|c deton")
+EnableTrigger ("rabite19", false)
+EnableTrigger ("rabite20", true)
+</send>
+  </trigger>
+  <trigger
+   group="rabitetime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="rabite18"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("w|c deton vill|c deton")
+EnableTrigger ("rabite18", false)
+EnableTrigger ("rabite19", true)
+</send>
+  </trigger>
+  <trigger
+   group="rabitetime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="rabite13"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("e|c deton vill|c 'mind sap'|c deton")
+EnableTrigger ("rabite13", false)
+EnableTrigger ("rabite14", true)
+</send>
+  </trigger>
+  <trigger
+   group="rabitetime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="rabite12"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("e|c deton vill|c 'mind sap'|c deton")
+EnableTrigger ("rabite12", false)
+EnableTrigger ("rabite13", true)
+</send>
+  </trigger>
+  <trigger
+   group="rabitetime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="rabite11"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("e|c deton vill|c deton")
+EnableTrigger ("rabite11", false)
+EnableTrigger ("rabite12", true)
+</send>
+  </trigger>
+  <trigger
+   group="rabitetime"
+   ignore_case="y"
+   match="*hey aren't here."
+   name="rabite10"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("e|c deton vill|c deton")
+EnableTrigger ("rabite10", false)
+EnableTrigger ("rabite11", true)
+</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   expand_variables="y"
+   group="rabitetime"
+   ignore_case="y"
+   match="*ime passes by, the world moves on."
+   name="rabitetime"
+   send_to="12"
+   sequence="1"
+  >
+  <send>
+Execute ("wake|gt sanc|gt sanc|swift|drink bowl")
+DoAfter (5, "gt regen")
+DoAfter (7, "e|c deton rabite")
+EnableTrigger ("oom", true)
+EnableTrigger ("rabitetime", false)
+EnableTrigger ("rabite1", true)</send>
+  </trigger>
+  <trigger
+   expand_variables="y"
+   group="cowtime"
+   ignore_case="y"
+   match="*ow's start falling from the sky!"
+   name="cowtime"
+   send_to="12"
+   sequence="1"
+  >
+  <send>Execute ("wake|gt sanc|gt sanc|swift|c electri")
+DoAfter (5, "gt regen")
+DoAfter (8, "c deton cow")
+EnableTrigger ("cowtime", false)
+EnableTrigger ("cow1", true)</send>
+  </trigger>
+  <trigger
+   group="rabitetime"
+   ignore_case="y"
+   match="You receive * of * total experience points."
+   name="soul3"
+   send_to="12"
+   sequence="2"
+  >
+  <send>DoAfter(MtRand()*1+1, "c deton rabite")</send>
+  </trigger>
+  <trigger
+   group="rabitetime"
+   ignore_case="y"
+   match="You receive * of * total experience points."
+   name="soul4"
+   send_to="12"
+   sequence="2"
+  >
+  <send>DoAfter(MtRand()*1+1, "c deton rabite")</send>
+  </trigger>
+  <trigger
+   group="cowtime"
+   ignore_case="y"
+   match="You receive * of * total experience points."
+   name="soul2"
+   send_to="12"
+   sequence="2"
+  >
+  <send>DoAfter(MtRand()*1+1, "c deton cow")</send>
+  </trigger>
+  <trigger
+   group="drandur"
+   ignore_case="y"
+   match="You receive * of * total experience points."
+   name="soul"
+   send_to="12"
+   sequence="2"
+  >
+  <send>DoAfter(MtRand()*1+1, "impale cit")</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="* DISARMS you!"
+   sequence="100"
+  >
+  <send>get calf
+wield calf</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="* says 'stand'"
+   sequence="100"
+  >
+  <send>stand</send>
+  </trigger>
+  <trigger
+   group="sleeptrapbitch"
+   ignore_case="y"
+   match="* sleeps."
+   send_to="12"
+   sequence="100"
+  >
+  <send>Execute ("bs %1")
+EnableTriggerGroup ("sleeptrapbitch", false)</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="* tells the group 'enter portal'."
+   sequence="100"
+  >
+  <send>enter portal</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="* tells the group 'stand'."
+   sequence="100"
+  >
+  <send>stand</send>
+  </trigger>
+  <trigger
+   expand_variables="y"
+   group="drandur"
+   match="*ou cannot gain any more experience. Locate a trainer and level up!"
+   name="level"
+   send_to="12"
+   sequence="100"
+  >
+  <send>Execute ("recall|u|n|w|w|w|w|s|s|open e|e|e|e|wear badge|learn war|recall|wear gown|u|tell khadaji sum me|sc|sc|sc|sc|sc|sc|sc|sc")
+
+</send>
+  </trigger>
+  <trigger
+   expand_variables="y"
+   group="cowtime"
+   match="*ou cannot gain any more experience. Locate a trainer and level up!"
+   name="level2"
+   send_to="12"
+   sequence="100"
+  >
+  <send>Execute ("recall|u|n|n|n|n|n|e|open s|s|e|remove bracers||remove bracers|wear bracelet|wear bracelet|learn illusionist|recall|rem bracelet|rem bracelet|wear bracers|wear bracers|u|tell khadaji sum me|sc")
+
+</send>
+  </trigger>
+  <trigger
+   expand_variables="y"
+   group="rabitetime"
+   match="*ou cannot gain any more experience. Locate a trainer and level up!"
+   name="level3"
+   send_to="12"
+   sequence="100"
+  >
+  <send>Execute ("recall|u|n|n|n|n|n|e|open s|s|e|remove bracers||remove bracers|wear bracelet|wear bracelet|learn illusionist|recall|rem bracelet|rem bracelet|wear bracers|wear bracers|gt potos|sc")
+
+</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="*ou don't have enough mana."
+   name="oom"
+   send_to="12"
+   sequence="100"
+  >
+  <send>Execute ("n|n|e|e|e|e||n|n|e|e|s|s|s|s|w|w|w|w|w|n|w|w|w|w|s|s|w|w|w|w|gt lay|gt lay|gt lay|gt lay|med")
+EnableTrigger ("soul4", false)
+EnableTrigger ("soul3", true)
+EnableTrigger ("rabite23", false)
+EnableTrigger ("rabitetime", true)
+EnableTrigger ("oom", false)
+</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="*ou ready yourself for a flurried attack."
+   send_to="12"
+   sequence="100"
+  >
+  <send>EnableTriggerGroup ("flurry", false)</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="A demon citizen DISARMS you!"
+   sequence="100"
+  >
+  <send>get oblivion
+wield oblivion
+get upper
+wield upper
+bs citi
+impale citi</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="A female villager is in AWE of you!"
+   sequence="100"
+  >
+  <send>c deton villager</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="A giant cow is in AWE of you!"
+   sequence="100"
+  >
+  <send>c deton cow</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="A rabite is in AWE of you!"
+   sequence="100"
+  >
+  <send>c deton rabite</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="A small sliver of glass shines in the light."
+   sequence="100"
+  >
+  <send>get sliver
+put sliver moogle</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="As your final blow lands, some gold ore falls from a demon citizen!"
+   sequence="100"
+  >
+  <send>get ore corpse;put ore moogle</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="As your final blow lands, some silver ore falls from a demon citizen!"
+   sequence="100"
+  >
+  <send>get ore corpse;put ore moogle</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="Nemesauce says 'enter portal'"
+   sequence="100"
+  >
+  <send>enter portal</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="Nemesauce says 'go level'"
+   sequence="100"
+  >
+  <send>recall
+fill bowl
+u
+n
+n
+n
+n
+n
+e
+open s
+s
+e
+s
+wear badge
+learn psi
+recall
+u
+n
+w
+w
+w
+w
+s
+s
+open e
+e
+e
+learn warr
+recall
+wear nebrie
+u
+tell nemesauce sum me</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="Nemesauce utters the words, 'morari adferrus'."
+   sequence="100"
+  >
+  <send>flurry</send>
+  </trigger>
+  <trigger
+   match="Nemesauce utters the words, 'oculoahp xugp'."
+   sequence="100"
+  >
+  <send>circle</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="New guards come to relieve the tired men of Krynn."
+   sequence="100"
+  >
+  <send>l</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   ignore_case="y"
+   match="Oblivion starts to glow as you swing it *"
+   name="sleep"
+   send_to="12"
+   sequence="100"
+  >
+  <send>EnableTriggerGroup ("sleeptrapbitch", true)</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="Shax says 'follow'"
+   sequence="100"
+  >
+  <send>fol shax</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="Shax says 'level *'"
+   sequence="100"
+  >
+  <send>enter port
+learn *
+enter port</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="Shax tells the group 'level *'."
+   sequence="100"
+  >
+  <send>en port
+learn %1
+en port</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="Shax utters the words, 'tuizhuq fjshjcandus'."
+   sequence="100"
+  >
+  <send>slash</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="Someone blows some magical dust into your eyes, blinding you!"
+   sequence="100"
+  >
+  <send>c cure</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="The kill is blessed by the gods and %1 drops %2!"
+   sequence="100"
+  >
+  <send>get all corpse</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="The kill is blessed by the gods and * drops *!"
+   sequence="100"
+  >
+  <send>get all corpse</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="The white aura around your body fades."
+   sequence="100"
+  >
+  <send>gt sanc</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="You are hungry."
+   sequence="100"
+  >
+  <send>drink bowl</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="You disappear into the void."
+   sequence="100"
+  >
+  <send>drink</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="You fall over your own feet!"
+   sequence="100"
+  >
+  <send>swift</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="You feel less immune."
+   sequence="100"
+  >
+  <send>c immunity</send>
+  </trigger>
+  <trigger
+   match="You get some gold coins from corpse of *"
+   sequence="100"
+  >
+  <send>get 3 potion pouch
+quaff potion
+quaff potion
+quaff potion</send>
+  </trigger>
+  <trigger
+   group="rabitetime"
+   match="You lost your concentration."
+   sequence="100"
+  >
+  <send>c deton rabi
+c deton villager</send>
+  </trigger>
+  <trigger
+   group="cowtime"
+   match="You lost your concentration."
+   sequence="100"
+  >
+  <send>c deton cow</send>
+  </trigger>
+  <trigger
+   match="You morph and shrink, returning to normal."
+   sequence="100"
+  >
+  <send>c dragon demon</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="You relax your battle stance."
+   sequence="100"
+  >
+  <send>flurry</send>
+  </trigger>
+  <trigger
+   match="You slow down."
+   sequence="100"
+  >
+  <send>quicken</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="You sure are BLEEDING!"
+   sequence="100"
+  >
+  <send>r
+gt lay
+gt lay
+gt lay</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="Your aura of calmness fades."
+   sequence="100"
+  >
+  <send>c calm</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="Your strength is no longer blessed."
+   sequence="100"
+  >
+  <send>c prayer</send>
+  </trigger>
+  <trigger
+   match="^You (drop|get|buy) .+\.$"
+   regexp="y"
+   send_to="10"
+   sequence="100"
+  >
+  <send>inv</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   match="ou relax your battle stance"
+   send_to="12"
+   sequence="100"
+  >
+  <send>EnableTriggerGroup ("flurry", true)</send>
+  </trigger>
+  <trigger
+   group="sleeptrapbitch"
+   ignore_case="y"
+   match="you failed."
+   send_to="12"
+   sequence="100"
+  >
+  <send>EnableTriggerGroup ("sleeptrapbitch", false)</send>
+  </trigger>
+</triggers>
+
+<!-- aliases -->
+
+<aliases
+   muclient_version="5.06-pre"
+   world_file_version="15"
+  >
+  <alias
+   match="arpollo"
+   enabled="y"
+   sequence="100"
+  >
+  <send>unlock west
+open west
+west
+close east
+lock east
+so
+so
+do
+do
+we
+unlock no
+no
+close so
+lock so</send>
+  </alias>
+  <alias
+   match="cowtime off"
+   enabled="y"
+   send_to="12"
+   sequence="100"
+  >
+  <send>EnableTriggerGroup ("cowtime", false)</send>
+  </alias>
+  <alias
+   match="cowtime on"
+   enabled="y"
+   send_to="12"
+   sequence="100"
+  >
+  <send>EnableTrigger ("cow1", true)
+EnableTrigger ("soul2", true)
+EnableTrigger ("level2", true)</send>
+  </alias>
+  <alias
+   match="denofvampires"
+   enabled="y"
+   sequence="100"
+  >
+  <send>u
+n
+e
+e
+e
+e
+e
+e
+e
+e
+e
+e
+s
+s
+d
+e
+s
+s
+e
+n
+e
+e
+s
+s
+e
+e
+e
+s
+s
+e</send>
+  </alias>
+  <alias
+   match="drandur off"
+   enabled="y"
+   send_to="12"
+   sequence="100"
+  >
+  <send>EnableTriggerGroup ("drandur", false)
+</send>
+  </alias>
+  <alias
+   match="drandur on"
+   enabled="y"
+   send_to="12"
+   sequence="100"
+  >
+  <send>EnableTrigger ("a", true)
+EnableTrigger ("soul", true)
+EnableTrigger ("level", true)</send>
+  </alias>
+  <alias
+   match="druidforest"
+   enabled="y"
+   sequence="100"
+  >
+  <send>u
+n
+e
+e
+e
+e
+e
+e
+e
+e
+e
+e
+s
+s
+u
+e
+e
+e
+d
+n</send>
+  </alias>
+  <alias
+   match="heal"
+   enabled="y"
+   sequence="100"
+  >
+  <send>c 'complete heal'</send>
+  </alias>
+  <alias
+   match="july"
+   enabled="y"
+   sequence="100"
+  >
+  <send>u
+s
+s
+s
+s
+s
+s
+e
+e
+s
+s
+s
+w
+n
+w
+d
+s
+s
+s
+w
+s
+e
+e
+e
+e
+e
+n
+n
+e
+e
+n
+n
+w
+w
+w
+n
+n
+n
+n
+n
+n
+n
+n
+d
+</send>
+  </alias>
+  <alias
+   match="kochan"
+   enabled="y"
+   sequence="100"
+  >
+  <send>u
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+u
+n
+e
+u
+n
+n
+e
+e
+e
+e
+n
+n
+n
+n
+n
+e
+e
+n
+n
+e
+n
+n
+n
+w
+w
+w
+s
+s
+w
+n</send>
+  </alias>
+  <alias
+   match="locate *"
+   enabled="y"
+   sequence="100"
+  >
+  <send>c 'locate object' %1</send>
+  </alias>
+  <alias
+   match="potos"
+   enabled="y"
+   sequence="100"
+  >
+  <send>u
+n
+e
+e
+e
+e
+e
+e
+e
+e
+e
+e
+s
+s
+u
+e
+e
+s
+n
+e
+e
+e
+d
+d
+s
+s
+s
+s
+e
+e
+n
+n
+</send>
+  </alias>
+  <alias
+   match="psi"
+   enabled="y"
+   sequence="100"
+  >
+  <send>u
+n
+n
+n
+n
+n
+e
+open south
+s
+e
+s
+</send>
+  </alias>
+  <alias
+   match="quasqueton"
+   enabled="y"
+   sequence="100"
+  >
+  <send>u
+n
+w
+w
+w
+w
+w
+w
+w
+w
+w
+n
+n
+n
+w
+n
+n
+n
+w
+w
+w
+s
+s
+w
+</send>
+  </alias>
+  <alias
+   match="r"
+   enabled="y"
+   sequence="100"
+  >
+  <send>get 3 potion pack
+quaff potion
+quaff potion
+quaff potion</send>
+  </alias>
+  <alias
+   match="rabitetime off"
+   enabled="y"
+   send_to="12"
+   sequence="100"
+  >
+  <send>EnableTrigger ("rabite1", false)
+EnableTrigger ("soul3", false)
+EnableTrigger ("level3", false)</send>
+  </alias>
+  <alias
+   match="rabitetime on"
+   enabled="y"
+   send_to="12"
+   sequence="100"
+  >
+  <send>EnableTrigger ("rabite1", true)
+EnableTrigger ("soul3", true)
+EnableTrigger ("level3", true)</send>
+  </alias>
+  <alias
+   match="sap"
+   enabled="y"
+   sequence="100"
+  >
+  <send>c 'mind sap'</send>
+  </alias>
+  <alias
+   match="sd"
+   enabled="y"
+   sequence="100"
+  >
+  <send>search doors
+search traps
+search items</send>
+  </alias>
+  <alias
+   match="seljuk"
+   enabled="y"
+   sequence="100"
+  >
+  <send>u
+n
+e
+e
+e
+e
+e
+e
+e
+n
+n
+n
+n
+e
+n
+n
+e
+e
+e</send>
+  </alias>
+  <alias
+   match="shaxchat"
+   enabled="y"
+   sequence="100"
+  >
+  <send>link 587</send>
+  </alias>
+  <alias
+   match="slash off"
+   enabled="y"
+   send_to="12"
+   sequence="100"
+  >
+  <send>EnableTriggerGroup("slash", false)</send>
+  </alias>
+  <alias
+   match="slash on"
+   enabled="y"
+   send_to="12"
+   sequence="100"
+  >
+  <send>EnableTriggerGroup("slash", true)</send>
+  </alias>
+  <alias
+   match="soot"
+   enabled="y"
+   sequence="100"
+  >
+  <send>say Wyrm, fly me back home!</send>
+  </alias>
+  <alias
+   match="storeroom"
+   enabled="y"
+   sequence="100"
+  >
+  <send>up
+no
+we
+we
+we
+we
+so
+so
+so
+ea
+ea
+up
+up
+up
+up
+up
+no
+no
+unlock east
+open east
+east
+close west
+lock west</send>
+  </alias>
+  <alias
+   match="thief"
+   enabled="y"
+   sequence="100"
+  >
+  <send>up
+no
+no
+no
+no
+no
+we
+we
+so
+so
+open east
+ea
+so
+</send>
+  </alias>
+  <alias
+   match="view *"
+   enabled="y"
+   sequence="100"
+  >
+  <send>c telescope %1</send>
+  </alias>
+  <alias
+   match="find *"
+   enabled="y"
+   sequence="101"
+  >
+  <send>c 'locate monster' %1</send>
+  </alias>
+</aliases>
+
+<!-- timers -->
+
+<timers
+   muclient_version="5.06-pre"
+   world_file_version="15"
+  >
+</timers>
+
+<!-- macros -->
+
+<macros
+   muclient_version="5.06-pre"
+   world_file_version="15"
+  >
+
+  <macro name="up" type="send_now" >
+  <send>up</send>
+
+  </macro>
+
+  <macro name="down" type="send_now" >
+  <send>down</send>
+
+  </macro>
+
+  <macro name="north" type="send_now" >
+  <send>north</send>
+
+  </macro>
+
+  <macro name="south" type="send_now" >
+  <send>south</send>
+
+  </macro>
+
+  <macro name="east" type="send_now" >
+  <send>east</send>
+
+  </macro>
+
+  <macro name="west" type="send_now" >
+  <send>west</send>
+
+  </macro>
+
+  <macro name="examine" type="replace" >
+  <send>examine </send>
+
+  </macro>
+
+  <macro name="look" type="replace" >
+  <send>look </send>
+
+  </macro>
+
+  <macro name="page" type="replace" >
+  <send>page </send>
+
+  </macro>
+
+  <macro name="say" type="replace" >
+  <send>say </send>
+
+  </macro>
+
+  <macro name="whisper" type="replace" >
+  <send>whisper </send>
+
+  </macro>
+
+  <macro name="doing" type="send_now" >
+  <send>DOING</send>
+
+  </macro>
+
+  <macro name="who" type="send_now" >
+  <send>WHO</send>
+
+  </macro>
+
+  <macro name="drop" type="replace" >
+  <send>drop </send>
+
+  </macro>
+
+  <macro name="take" type="replace" >
+  <send>take </send>
+
+  </macro>
+
+  <macro name="logout" type="send_now" >
+  <send>LOGOUT</send>
+
+  </macro>
+
+  <macro name="quit" type="send_now" >
+  <send>QUIT</send>
+
+  </macro>
+</macros>
+
+<!-- variables -->
+
+<variables
+   muclient_version="5.06-pre"
+   world_file_version="15"
+  >
+</variables>
+
+<!-- colours -->
+
+<colours
+   muclient_version="5.06-pre"
+   world_file_version="15"
+  >
+
+<ansi>
+
+ <normal>
+   <colour seq="1" rgb="black" />
+   <colour seq="2" rgb="maroon" />
+   <colour seq="3" rgb="green" />
+   <colour seq="4" rgb="olive" />
+   <colour seq="5" rgb="navy" />
+   <colour seq="6" rgb="purple" />
+   <colour seq="7" rgb="teal" />
+   <colour seq="8" rgb="silver" />
+
+ </normal>
+
+ <bold>
+   <colour seq="1" rgb="gray" />
+   <colour seq="2" rgb="red" />
+   <colour seq="3" rgb="lime" />
+   <colour seq="4" rgb="yellow" />
+   <colour seq="5" rgb="blue" />
+   <colour seq="6" rgb="fuchsia" />
+   <colour seq="7" rgb="aqua" />
+   <colour seq="8" rgb="white" />
+
+ </bold>
+
+</ansi>
+
+<custom>
+  <colour seq="1" name="Custom1" text="#FF8080" back="black" />
+  <colour seq="2" name="Custom2" text="#FFFF80" back="black" />
+  <colour seq="3" name="Custom3" text="#80FF80" back="black" />
+  <colour seq="4" name="Custom4" text="#80FFFF" back="black" />
+  <colour seq="5" name="Custom5" text="#0080FF" back="black" />
+  <colour seq="6" name="Custom6" text="#FF80C0" back="black" />
+  <colour seq="7" name="Custom7" text="red" back="black" />
+  <colour seq="8" name="Custom8" text="#0080C0" back="black" />
+  <colour seq="9" name="Custom9" text="fuchsia" back="black" />
+  <colour seq="10" name="Custom10" text="#804040" back="black" />
+  <colour seq="11" name="Custom11" text="#FF8040" back="black" />
+  <colour seq="12" name="Custom12" text="teal" back="black" />
+  <colour seq="13" name="Custom13" text="#004080" back="black" />
+  <colour seq="14" name="Custom14" text="#FF0080" back="black" />
+  <colour seq="15" name="Custom15" text="green" back="black" />
+  <colour seq="16" name="Custom16" text="blue" back="black" />
+
+</custom>
+</colours>
+
+<!-- keypad -->
+
+<keypad
+   muclient_version="5.06-pre"
+   world_file_version="15"
+  >
+
+  <key name="0" >
+  <send>look</send>
+  </key>
+
+  <key name="1" >
+  <send>sw</send>
+  </key>
+
+  <key name="2" >
+  <send>south</send>
+  </key>
+
+  <key name="3" >
+  <send>se</send>
+  </key>
+
+  <key name="4" >
+  <send>west</send>
+  </key>
+
+  <key name="5" >
+  <send>WHO</send>
+  </key>
+
+  <key name="6" >
+  <send>east</send>
+  </key>
+
+  <key name="7" >
+  <send>nw</send>
+  </key>
+
+  <key name="8" >
+  <send>north</send>
+  </key>
+
+  <key name="9" >
+  <send>ne</send>
+  </key>
+
+  <key name="." >
+  <send>hide</send>
+  </key>
+
+  <key name="/" >
+  <send>inventory</send>
+  </key>
+
+  <key name="*" >
+  <send>score</send>
+  </key>
+
+  <key name="-" >
+  <send>up</send>
+  </key>
+
+  <key name="+" >
+  <send>down</send>
+  </key>
+
+  <key name="Ctrl+0" >
+  </key>
+
+  <key name="Ctrl+1" >
+  </key>
+
+  <key name="Ctrl+2" >
+  </key>
+
+  <key name="Ctrl+3" >
+  </key>
+
+  <key name="Ctrl+4" >
+  </key>
+
+  <key name="Ctrl+5" >
+  </key>
+
+  <key name="Ctrl+6" >
+  </key>
+
+  <key name="Ctrl+7" >
+  </key>
+
+  <key name="Ctrl+8" >
+  </key>
+
+  <key name="Ctrl+9" >
+  </key>
+
+  <key name="Ctrl+." >
+  </key>
+
+  <key name="Ctrl+/" >
+  </key>
+
+  <key name="Ctrl+*" >
+  </key>
+
+  <key name="Ctrl+-" >
+  </key>
+
+  <key name="Ctrl++" >
+  </key>
+</keypad>
+
+<!-- printing -->
+
+<printing
+   muclient_version="5.06-pre"
+   world_file_version="15"
+  >
+
+<ansi>
+
+ <normal>
+
+ </normal>
+
+ <bold>
+   <style seq="1" bold="y" />
+   <style seq="2" bold="y" />
+   <style seq="3" bold="y" />
+   <style seq="4" bold="y" />
+   <style seq="5" bold="y" />
+   <style seq="6" bold="y" />
+   <style seq="7" bold="y" />
+   <style seq="8" bold="y" />
+
+ </bold>
+
+</ansi>
+</printing>
+
+<!-- plugins -->
+<include name="DemonMUSH Chat Window.xml" plugin="y" />
+<include name="DemonMUSH Chat Echo.xml" plugin="y" />
+<include name="aard_repaint_buffer.xml" plugin="y" />
+<include name="aard_miniwindow_z_order_monitor.xml" plugin="y" />
+<include name="C:\Users\Jeffrey Johnston\Documents\slowspeedwalk.xml" plugin="y" />
+<include name="aard_GMCP_handler.xml" plugin="y" />
+<include name="LuaAudio.xml" plugin="y" />
+<include name="DemonMUSH_Theme_Controller.xml" plugin="y" />
+<include name="DemonLord Chat.xml" plugin="y" />
+<include name="DemonMUSH Instance Handler.xml" plugin="y" />
+<include name="DemonMUSH Mobkill Counter.xml" plugin="y" />
+<include name="Fighting_Sounds.xml" plugin="y" />
+<include name="Play_Random_Sound.xml" plugin="y" />
+<include name="aard_Copy_Colour_Codes.xml" plugin="y" />
+<include name="AA_1_Ghost.xml" plugin="y" />
+<include name="DemonMUSH Exp Tracker.xml" plugin="y" />
+<include name="DemonMUSH KXWT Handler.xml" plugin="y" />
+<include name="DemonMUSH Main Layout.xml" plugin="y" />
+<include name="DemonMUSH Communication Catcher.xml" plugin="y" />
+<include name="DemonMUSH Big Gauge.xml" plugin="y" />
+<include name="Hyperlink_URL2.xml" plugin="y" />
+</muclient>

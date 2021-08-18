@@ -1,0 +1,41 @@
+Jungle Terrain
+Void Terrain
+Fountains
+Shops - Weapon - Armor - Item - Treasure - Wand - Jewelry, etc
+Ferry - tickets
+Pet shop
+Locked doors???
+
+[STARTED/PROGRESS] Affects/cooldown button 
+Create more Icons
+
+[UNSTARTED] SHOW LAG on commands, etc, when you can do something next.
+ Ambience 'Right.  The lag (via spells, skills, ordering pets, etc) acknowledgement 
+would be stellar, so you can have a visual notice on how long your commands are down for.'
+
+
+Show remort in window
+show level in window
+check innate for icons?
+
+
+
+The eclipse elemental now follows you.
+The eclipse elemental stops following you.
+
+Trip to kakkara
+9:22:40
+9:26:30
+
+Chobin in kak
+9:26:38 lets pack up and go
+come every 6 minutes
+9:32:58
+stayonly for a minute
+9:33:58
+9:40:19
+9:40:48
+9:43:59
+
+You have become better at *!
+You learn from your mistakes, and your * skill improves.

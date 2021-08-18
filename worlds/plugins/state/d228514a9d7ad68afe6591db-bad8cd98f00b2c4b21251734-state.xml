@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE muclient>
+<!-- MuClient version 5.07-pre -->
+<!-- Written by Nick Gammon -->
+<!-- Home Page: http://www.mushclient.com/ -->
+
+<!-- Plugin state saved. Plugin: "CleftMUSH_Update_Manager". World: "Cleft of Dimensions". -->
+
+<muclient>
+
+<!-- variables -->
+
+<variables
+   muclient_version="5.07-pre"
+   world_file_version="15"
+  >
+  <variable name="installedPlugins">{
+  ["353de94ba6c42060d839e256"] = "\"4efa6052baf7fa55182dee60c2c7c6da48dcc64a03c16ca67d5bca60e55b8d3c\"",
+  ["55616ea13339bc68e963e1f8"] = "\"053ba52b38633e71454c3aa481704344dbbafb4a6b5122e04931498d92221bd3\"",
+  ["48062dcd6b934c590df53c68"] = "\"d70dfb7e890ff17036cd63762f6f6fb74ccf0e2dfa506ceb876abfe0669d2dfe\"",
+  ["84164fd114202591729cb51b"] = "\"053ba52b38633e71454c3aa481704344dbbafb4a6b5122e04931498d92221bd3\"",
+  dd07d6dbe73fe0bd02ddb62c = "\"27fddbc7328b94a15f674dd9ca8a89c0e3528042e306cc70e50b70484c8a1c32\"",
+  b555825a4a5700c35fa80780 = "\"053ba52b38633e71454c3aa481704344dbbafb4a6b5122e04931498d92221bd3\"",
+  }</variable>
+  <variable name="lastListHash">"964d7b29e13b2455a17ba492472041a3ca6e44587c8e9104e9f52146dbb75781"</variable>
+  <variable name="lastPluginList">{
+  [1] = {
+    download = "https://raw.githubusercontent.com/AsmodeusBrooding/CleftUpdater/master/CleftMUSH-Mapper-Latest.zip",
+    ids = {
+      [1] = "dd07d6dbe73fe0bd02ddb62c",
+      },
+    installpath = "1",
+    description = "This is the official CleftMUSH Graphical Mapper.",
+    updated = true,
+    lastModified = "\"053ba52b38633e71454c3aa481704344dbbafb4a6b5122e04931498d92221bd3\"",
+    installed = true,
+    name = "CleftMUSH Mapper",
+    author = "Asmodeus",
+    },
+  [4] = {
+    download = "https://raw.githubusercontent.com/AsmodeusBrooding/CleftUpdater/master/CleftMUSH-Chat-Latest.zip",
+    ids = {
+      [1] = "55616ea13339bc68e963e1f8",
+      [2] = "b555825a4a5700c35fa80780",
+      [3] = "84164fd114202591729cb51b",
+      },
+    installpath = "0",
+    description = "Displays all communications in a window. Tabs can be added to the window, and channels assigned to new tabs.",
+    updated = true,
+    lastModified = "\"053ba52b38633e71454c3aa481704344dbbafb4a6b5122e04931498d92221bd3\"",
+    installed = true,
+    name = "CleftMUSH Chat Window",
+    author = "Asmodeus and Fiendish",
+    },
+  [2] = {
+    download = "https://raw.githubusercontent.com/AsmodeusBrooding/CleftUpdater/master/CleftMUSH-Group-Latest.zip",
+    ids = {
+      [1] = "353de94ba6c42060d839e256",
+      },
+    installpath = "1",
+    description = "Displays hp/mana/move gauges for you, your group, and your enemies.",
+    updated = true,
+    lastModified = "\"053ba52b38633e71454c3aa481704344dbbafb4a6b5122e04931498d92221bd3\"",
+    installed = true,
+    name = "CleftMUSH Group Monitor",
+    author = "Asmodeus and Elisius",
+    },
+  [3] = {
+    download = "https://raw.githubusercontent.com/AsmodeusBrooding/CleftUpdater/master/CleftMUSH-Gauges-Latest.zip",
+    ids = {
+      [1] = "48062dcd6b934c590df53c68",
+      },
+    installpath = "0",
+    description = "Displays hp/mana/move/exp/enemy/alignment gauges. The right-click menu offers major customization functionality.",
+    updated = true,
+    lastModified = "\"053ba52b38633e71454c3aa481704344dbbafb4a6b5122e04931498d92221bd3\"",
+    installed = true,
+    name = "CleftMUSH Big Gauges",
+    author = "Asmodeus",
+    },
+  }</variable>
+</variables>
+</muclient>
