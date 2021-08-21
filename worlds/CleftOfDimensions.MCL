@@ -23,7 +23,7 @@
    script_editor_argument="%file"
    script_language="Lua"
    script_prefix="\\\"
-   site="localhost"
+   site="192.168.1.12"
    spam_message="look"
    speed_walk_prefix="#"
    terminal_identification="MUSHclient-Aard"
@@ -61,6 +61,7 @@
    input_font_charset="1"
    input_text_colour="white"
    keypad_enable="y"
+   line_information="y"
    log_input="y"
    log_notes="y"
    log_output="y"
@@ -71,6 +72,7 @@
    omit_date_from_save_files="y"
    output_font_height="12"
    output_font_weight="400"
+   output_font_charset="1"
    paste_delay_per_lines="1"
    pixel_offset="1"
    port="9000"
@@ -471,13 +473,13 @@ wait.make (function ()
     SetStatus (string.format ("The S.S. Zelbess departs in %i seconds", i))
     wait.time (1)
   end -- for
-  
+
   SetStatus (string.format ("The S.S. Zelbess is departing within the next minute!!!", i))
   wait.time (60)
 
   SetStatus ("Ready")
 
-end) 
+end)
 
 </send>
   </trigger>
@@ -1009,7 +1011,7 @@ throw shadowblade</send>
    send_to="12"
    sequence="100"
   >
-  <send>if %2 &gt;16 then 
+  <send>if %2 &gt;16 then
 Execute("bj stand")
 elseif %2 &gt;= 22 then
 Execute("bj start")
@@ -1739,18 +1741,18 @@ ColourNote("lime", "", "Obstacle Course Mode ON.")</send>
   </alias>
   <alias
    match="r"
-   enabled="y"
-   sequence="100"
-  >
-  <send>dance does the cha-cha-cha.</send>
-  </alias>
-  <alias
-   match="r"
    sequence="100"
   >
   <send>buy hoop
 hold hoop
 use hoop</send>
+  </alias>
+  <alias
+   match="r"
+   enabled="y"
+   sequence="100"
+  >
+  <send>dance does the cha-cha-cha.</send>
   </alias>
   <alias
    match="recall"
@@ -1932,16 +1934,16 @@ DoAfterSpecial (math.random (185, 240), 'Execute("snow %1")', sendto.script)</se
    enabled="y"
    sequence="100"
   >
-  <send>say heal self</send>
+  <send>buy dart
+hold dart
+use dart</send>
   </alias>
   <alias
    match="t"
    enabled="y"
    sequence="100"
   >
-  <send>buy dart
-hold dart
-use dart</send>
+  <send>say heal self</send>
   </alias>
   <alias
    match="tap"
@@ -2355,7 +2357,6 @@ pull orb</send>
 <include name="LuaAudio.xml" plugin="y" />
 <include name="aard_miniwindow_z_order_monitor.xml" plugin="y" />
 <include name="Aardwolf_mudbin.xml" plugin="y" />
-<include name="TetrisMiniwindow.xml" plugin="y" />
 <include name="CleftMUSH_Theme_Controller.xml" plugin="y" />
 <include name="CleftMUSH_Copy_Colour_Codes.xml" plugin="y" />
 <include name="CleftMUSH_Fake_Tracker_Channel.xml" plugin="y" />
@@ -2363,7 +2364,6 @@ pull orb</send>
 <include name="ActionBar.xml" plugin="y" />
 <include name="CleftMUSH_Plugin_Manager.xml" plugin="y" />
 <include name="CleftMUSH Communication Catcher.xml" plugin="y" />
-<include name="CleftMUSH_ConvertPacketInfo.xml" plugin="y" />
 <include name="CleftMUSH COD Handler.xml" plugin="y" />
 <include name="CleftMUSH Main Layout.xml" plugin="y" />
 <include name="CleftMUSH_Helper.xml" plugin="y" />
@@ -2371,7 +2371,7 @@ pull orb</send>
 <include name="CleftMUSH Group Monitor.xml" plugin="y" />
 <include name="timestamps.xml" plugin="y" />
 <include name="CleftMUSH_Gauges.xml" plugin="y" />
-<include name="C:\users\asmodeus\Desktop\DemonMUD-PLAY\worlds\plugins\DemonMUSH Mapper.xml" plugin="y" />
+<include name="DemonMUSH Mapper.xml" plugin="y" />
 <include name="Hyperlink_URL2.xml" plugin="y" />
 <include name="KnockKnock.xml" plugin="y" />
 <include name="help_races.xml" plugin="y" />
